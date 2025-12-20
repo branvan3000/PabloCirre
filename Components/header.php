@@ -10,6 +10,8 @@ $current_page = basename(dirname($_SERVER['PHP_SELF']));
 if ($current_page == 'PabloCirre') {
     $current_page = 'home';
 }
+
+require_once __DIR__ . '/config.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -26,7 +28,7 @@ if ($current_page == 'PabloCirre') {
     </title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/PabloCirre/assets/images/favicon.png">
+    <link rel="icon" type="image/png" href="<?php echo BASE_URL; ?>/assets/images/favicon.png">
 
     <!-- Fonts - Extended for font switcher -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,9 +38,9 @@ if ($current_page == 'PabloCirre') {
         rel="stylesheet">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="/PabloCirre/assets/css/main.css">
-    <link rel="stylesheet" href="/PabloCirre/assets/css/mobile-nav.css">
-    <link rel="stylesheet" href="/PabloCirre/assets/css/cookie-banner.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/main.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/mobile-nav.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/cookie-banner.css">
 
     <!-- Theme Initialization -->
     <script>
@@ -79,18 +81,18 @@ if ($current_page == 'PabloCirre') {
         <!-- Header Navigation -->
         <header class="main-header">
             <div class="logo">
-                <a href="/PabloCirre/" style="text-decoration: none; color: inherit;">Pablo Cirre</a>
+                <a href="<?php echo BASE_URL; ?>/" style="text-decoration: none; color: inherit;">Pablo Cirre</a>
             </div>
             <nav>
                 <div class="nav-item-dropdown">
-                    <a href="/PabloCirre/paginas/OpenData/"
+                    <a href="<?php echo BASE_URL; ?>/paginas/OpenData/"
                         class="<?php echo $current_page == 'OpenData' ? 'active' : ''; ?>">
                         <span class="nav-text">OpenData</span> <span
                             style="font-size: 0.7em; margin-left: 5px;">▼</span>
                     </a>
                     <div class="mega-menu">
                         <!-- CentralDeComunicacion.es -->
-                        <a href="/PabloCirre/paginas/OpenData/centraldecomunicacion/" class="mega-card">
+                        <a href="<?php echo BASE_URL; ?>/paginas/OpenData/centraldecomunicacion/" class="mega-card">
                             <div class="mega-card-header">
                                 <span class="mega-title">CentralDeComunicacion.es</span>
                             </div>
@@ -109,7 +111,7 @@ if ($current_page == 'PabloCirre') {
                         </a>
 
                         <!-- CompaniesData.cloud -->
-                        <a href="/PabloCirre/paginas/OpenData/companiesdata/" class="mega-card">
+                        <a href="<?php echo BASE_URL; ?>/paginas/OpenData/companiesdata/" class="mega-card">
                             <div class="mega-card-header">
                                 <span class="mega-title">CompaniesData.cloud</span>
                             </div>
@@ -128,7 +130,7 @@ if ($current_page == 'PabloCirre') {
                         </a>
 
                         <!-- UKBusinessDatabases -->
-                        <a href="/PabloCirre/paginas/OpenData/ukbusiness/" class="mega-card">
+                        <a href="<?php echo BASE_URL; ?>/paginas/OpenData/ukbusiness/" class="mega-card">
                             <div class="mega-card-header">
                                 <span class="mega-title">UKBusinessDatabases</span>
                             </div>
@@ -147,7 +149,7 @@ if ($current_page == 'PabloCirre') {
                         </a>
 
                         <!-- Central.Enterprises -->
-                        <a href="/PabloCirre/paginas/OpenData/enterprises/" class="mega-card"
+                        <a href="<?php echo BASE_URL; ?>/paginas/OpenData/enterprises/" class="mega-card"
                             style="border-style: dashed;">
                             <div class="mega-card-header">
                                 <span class="mega-title">Central.Enterprises</span>
@@ -168,30 +170,31 @@ if ($current_page == 'PabloCirre') {
                         </a>
                     </div>
                 </div>
-                <a href="/PabloCirre/paginas/Tools/" class="<?php echo $current_page == 'Tools' ? 'active' : ''; ?>">
+                <a href="<?php echo BASE_URL; ?>/paginas/Tools/"
+                    class="<?php echo $current_page == 'Tools' ? 'active' : ''; ?>">
                     <span class="nav-text">Tools</span>
                 </a>
-                <a href="/PabloCirre/paginas/Experiences/"
+                <a href="<?php echo BASE_URL; ?>/paginas/Experiences/"
                     class="<?php echo $current_page == 'Experiences' ? 'active' : ''; ?>">
                     <span class="nav-text">Experiences</span>
                 </a>
-                <a href="/PabloCirre/paginas/Services/"
+                <a href="<?php echo BASE_URL; ?>/paginas/Services/"
                     class="<?php echo $current_page == 'Services' ? 'active' : ''; ?>">
                     <span class="nav-text">Services</span>
                 </a>
-                <a href="/PabloCirre/paginas/Projects/"
+                <a href="<?php echo BASE_URL; ?>/paginas/Projects/"
                     class="<?php echo $current_page == 'Projects' ? 'active' : ''; ?>">
                     <span class="nav-text">Projects</span>
                 </a>
-                <a href="/PabloCirre/paginas/Knowledge/"
+                <a href="<?php echo BASE_URL; ?>/paginas/Knowledge/"
                     class="<?php echo $current_page == 'Knowledge' ? 'active' : ''; ?>">
                     <span class="nav-text">Knowledge</span>
                 </a>
-                <a href="/PabloCirre/paginas/VideoGames/"
+                <a href="<?php echo BASE_URL; ?>/paginas/VideoGames/"
                     class="<?php echo $current_page == 'VideoGames' ? 'active' : ''; ?>">
                     <span class="nav-text">Video Experiences</span>
                 </a>
-                <a href="/PabloCirre/paginas/About-Me/"
+                <a href="<?php echo BASE_URL; ?>/paginas/About-Me/"
                     class="<?php echo $current_page == 'About-Me' ? 'active' : ''; ?>">
                     <span class="nav-text">About Me</span>
                 </a>

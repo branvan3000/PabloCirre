@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Services - Servicios y Consultoría
  */
@@ -18,7 +18,7 @@ include '../../Components/header.php';
         experiencia al servicio de tu proyecto.
     </p>
     <div>
-        <a href="/PabloCirre/paginas/About-Me/" class="btn-primary">Solicitar Consultoría</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/About-Me/" class="btn-primary">Solicitar Consultoría</a>
         <a href="#planes" class="link-secondary">Ver Planes</a>
     </div>
 </section>
@@ -45,7 +45,7 @@ include '../../Components/header.php';
                 <span class="pm-value">2-4 sem</span>
             </div>
         </div>
-        <a href="/PabloCirre/paginas/About-Me/" class="project-link">Consultar →</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/About-Me/" class="project-link">Consultar →</a>
     </div>
 
     <div class="project-card">
@@ -65,7 +65,7 @@ include '../../Components/header.php';
                 <span class="pm-value">1-2 sem</span>
             </div>
         </div>
-        <a href="/PabloCirre/Tools/verificador-email/" class="project-link">Ver Tool →</a>
+        <a href="<?php echo BASE_URL; ?>/Tools/verificador-email/" class="project-link">Ver Tool →</a>
     </div>
 
     <div class="project-card">
@@ -85,7 +85,7 @@ include '../../Components/header.php';
                 <span class="pm-value">2-3 sem</span>
             </div>
         </div>
-        <a href="/PabloCirre/paginas/About-Me/" class="project-link">Consultar →</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/About-Me/" class="project-link">Consultar →</a>
     </div>
 
     <div class="project-card">
@@ -105,7 +105,7 @@ include '../../Components/header.php';
                 <span class="pm-value">3-6 meses</span>
             </div>
         </div>
-        <a href="/PabloCirre/paginas/VideoGames/" class="project-link">Ver Proyectos →</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/VideoGames/" class="project-link">Ver Proyectos →</a>
     </div>
 
     <div class="project-card">
@@ -125,7 +125,7 @@ include '../../Components/header.php';
                 <span class="pm-value">Max 15</span>
             </div>
         </div>
-        <a href="/PabloCirre/paginas/Experiences/" class="project-link">Ver Cursos →</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/Experiences/" class="project-link">Ver Cursos →</a>
     </div>
 
     <div class="project-card">
@@ -145,7 +145,7 @@ include '../../Components/header.php';
                 <span class="pm-value">3 meses</span>
             </div>
         </div>
-        <a href="/PabloCirre/paginas/About-Me/" class="project-link">Consultar →</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/About-Me/" class="project-link">Consultar →</a>
     </div>
 
 </div>
@@ -246,7 +246,7 @@ include '../../Components/header.php';
     <h2 style="font-size: 2rem; margin-bottom: 10px;">¿Listo para empezar tu proyecto?</h2>
     <p style="color: #666; margin-bottom: 30px;">Agenda una consultoría inicial gratuita de 30 minutos.</p>
 
-    <form class="contact-form" action="/PabloCirre/paginas/About-Me/" method="get">
+    <form class="contact-form" action="<?php echo BASE_URL; ?>/paginas/About-Me/" method="get">
         <input type="email" name="email" placeholder="tu_email@empresa.com" required>
         <button type="submit" class="btn-primary">Agendar Consultoría</button>
     </form>

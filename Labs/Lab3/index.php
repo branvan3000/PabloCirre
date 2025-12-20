@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Lab 3 - Blue Moon
  */
@@ -19,7 +19,7 @@ if (!$is_standalone) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?php echo $page_title; ?></title>
-        <link rel="stylesheet" href="/PabloCirre/assets/css/main.css">
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/main.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;500;700&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -30,7 +30,7 @@ if (!$is_standalone) {
     <link rel="stylesheet" href="moon.css">
 
     <div class="back-nav">
-        <a href="/PabloCirre/Labs/">← Back to Labs</a>
+        <a href="<?php echo BASE_URL; ?>/Labs/">← Back to Labs</a>
     </div>
 
     <main class="blue-moon-container">

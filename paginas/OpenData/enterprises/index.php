@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Central Enterprises - Unified API (BETA)
  */
@@ -20,8 +20,8 @@ include '../../../Components/header.php';
         en desarrollo.
     </p>
     <div>
-        <a href="/PabloCirre/paginas/About-Me/" class="btn-primary">Solicitar Early Access</a>
-        <a href="/PabloCirre/paginas/OpenData/" class="link-secondary">Volver a OpenData</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/About-Me/" class="btn-primary">Solicitar Early Access</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/OpenData/" class="link-secondary">Volver a OpenData</a>
     </div>
 </section>
 
@@ -233,7 +233,7 @@ include '../../../Components/header.php';
     <p style="color: #666; margin-bottom: 30px;">Sé el primero en acceder cuando lancemos la beta pública.</p>
 
     <div style="max-width: 500px; margin: 0 auto;">
-        <a href="/PabloCirre/paginas/About-Me/" class="btn-primary">Contactar para Early Access</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/About-Me/" class="btn-primary">Contactar para Early Access</a>
     </div>
 </div>
 

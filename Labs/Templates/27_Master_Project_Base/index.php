@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Master Project Template v1.0
  * Includes: Advanced Lightbox (Img/Video/YT), Standard Nav, Splash Header
@@ -299,9 +299,9 @@ include '../../../Components/header.php';
 </style>
 
 <!-- --- NAVIGATION --- -->
-<!-- Change href to your desired back location (e.g., /PabloCirre/paginas/OpenData/) -->
+<!-- Change href to your desired back location (e.g., <?php echo BASE_URL; ?>/paginas/OpenData/) -->
 <div class="project-nav-bar">
-    <a href="/PabloCirre/Labs/" class="nav-back-btn">
+    <a href="<?php echo BASE_URL; ?>/Labs/" class="nav-back-btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -332,13 +332,13 @@ include '../../../Components/header.php';
         style="grid-column: 1 / -1; display: flex; gap: 20px; margin-bottom: 60px; padding-bottom: 60px; border-bottom: 1px solid var(--border-color);">
 
         <!-- Image Trigger -->
-        <button onclick="openLightbox('image', '/PabloCirre/assets/images/kaiju_preview.png')" class="btn-primary">
+        <button onclick="openLightbox('image', '<?php echo BASE_URL; ?>/assets/images/kaiju_preview.png')" class="btn-primary">
             Test Image
         </button>
 
         <!-- Video Trigger (Self Hosted) -->
         <!-- Replace 'path/to/video.mp4' with actual file -->
-        <button onclick="openLightbox('video', '/PabloCirre/assets/video/demo.mp4')" class="btn-primary">
+        <button onclick="openLightbox('video', '<?php echo BASE_URL; ?>/assets/video/demo.mp4')" class="btn-primary">
             Test Video (MP4)
         </button>
 
@@ -396,11 +396,11 @@ include '../../../Components/header.php';
             <!-- Video Item 1 (YouTube) -->
             <div class="video-card"
                 onclick="openLightbox('youtube', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
-                <img src="/PabloCirre/assets/images/kaiju_preview.png" class="video-thumb" alt="Video Thumb">
+                <img src="<?php echo BASE_URL; ?>/assets/images/kaiju_preview.png" class="video-thumb" alt="Video Thumb">
                 <div class="play-icon"></div>
             </div>
             <!-- Video Item 2 (Local) -->
-            <div class="video-card" onclick="openLightbox('video', '/PabloCirre/assets/video/demo.mp4')">
+            <div class="video-card" onclick="openLightbox('video', '<?php echo BASE_URL; ?>/assets/video/demo.mp4')">
                 <div
                     style="width:100%; height:100%; background: #333; display:flex; align-items:center; justify-content:center; color:#666;">
                     NO PREVIEW
@@ -410,7 +410,7 @@ include '../../../Components/header.php';
             <!-- Video Item 3 -->
             <div class="video-card"
                 onclick="openLightbox('youtube', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
-                <img src="/PabloCirre/assets/images/kaiju_preview.png" class="video-thumb" alt="Video Thumb">
+                <img src="<?php echo BASE_URL; ?>/assets/images/kaiju_preview.png" class="video-thumb" alt="Video Thumb">
                 <div class="play-icon"></div>
             </div>
         </div>

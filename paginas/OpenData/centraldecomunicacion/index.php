@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Central de Comunicación - Hitos Big Data (v7 Final Polish)
  * Estilo: Splash Style.
@@ -117,7 +117,7 @@ include '../../../Components/header.php';
     </p>
     <div>
         <a href="https://centraldecomunicacion.es" target="_blank" rel="noopener" class="btn-primary">Visitar Web →</a>
-        <a href="/PabloCirre/paginas/OpenData/" class="link-secondary">Volver a OpenData</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/OpenData/" class="link-secondary">Volver a OpenData</a>
     </div>
 </section>
 
@@ -135,7 +135,7 @@ include '../../../Components/header.php';
     </div>
     <!-- Metric 2: Digitalización (Standard Style) -->
     <div class="data-panel" style="cursor: pointer;"
-        onclick="openLightbox('/PabloCirre/assets/images/opendata_gallery/home_full.png')">
+        onclick="openLightbox('<?php echo BASE_URL; ?>/assets/images/opendata_gallery/home_full.png')">
         <div class="panel-header"><span class="panel-label">DIGITALIZACIÓN</span>
             <div class="light on" style="background: var(--accent-color);"></div>
         </div>

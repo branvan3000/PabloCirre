@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * OpenData - Big Data & Bases de Datos Empresas
  */
@@ -350,7 +350,7 @@ include '../../Components/header.php';
 
     <div class="projects-grid" style="margin-bottom: 120px;">
 
-        <a href="/PabloCirre/paginas/OpenData/centraldecomunicacion/" class="project-card"
+        <a href="<?php echo BASE_URL; ?>/paginas/OpenData/centraldecomunicacion/" class="project-card"
             style="text-decoration: none; color: inherit;">
             <h3 class="project-title">CentralDeComunicacion.es</h3>
             <p class="project-desc">
@@ -369,7 +369,7 @@ include '../../Components/header.php';
             </div>
         </a>
 
-        <a href="/PabloCirre/paginas/OpenData/companiesdata/" class="project-card"
+        <a href="<?php echo BASE_URL; ?>/paginas/OpenData/companiesdata/" class="project-card"
             style="text-decoration: none; color: inherit;">
             <h3 class="project-title">CompaniesData.cloud</h3>
             <p class="project-desc">
@@ -387,7 +387,7 @@ include '../../Components/header.php';
             </div>
         </a>
 
-        <a href="/PabloCirre/paginas/OpenData/ukbusiness/" class="project-card"
+        <a href="<?php echo BASE_URL; ?>/paginas/OpenData/ukbusiness/" class="project-card"
             style="text-decoration: none; color: inherit;">
             <h3 class="project-title">UKBusinessDatabases</h3>
             <p class="project-desc">
@@ -406,7 +406,7 @@ include '../../Components/header.php';
             </div>
         </a>
 
-        <a href="/PabloCirre/paginas/OpenData/enterprises/" class="project-card"
+        <a href="<?php echo BASE_URL; ?>/paginas/OpenData/enterprises/" class="project-card"
             style="text-decoration: none; color: inherit; position: relative;">
             <span class="project-tag" style="background: linear-gradient(135deg, #9945ff, #6b3fa0);">BETA</span>
             <h3 class="project-title">Central.Enterprises</h3>
@@ -548,8 +548,8 @@ include '../../Components/header.php';
         <p style="color: #666; margin-bottom: 30px;">Solicita una demo o consulta nuestros planes empresariales.</p>
 
         <div style="max-width: 500px; margin: 0 auto;">
-            <a href="/PabloCirre/paginas/Services/" class="btn-primary" style="margin-right: 10px;">Ver Planes</a>
-            <a href="/PabloCirre/paginas/About-Me/" class="link-secondary">Contactar</a>
+            <a href="<?php echo BASE_URL; ?>/paginas/Services/" class="btn-primary" style="margin-right: 10px;">Ver Planes</a>
+            <a href="<?php echo BASE_URL; ?>/paginas/About-Me/" class="link-secondary">Contactar</a>
         </div>
     </div>
 

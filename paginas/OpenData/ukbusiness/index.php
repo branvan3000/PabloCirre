@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * UK Business Databases - Complete B2B Data UK
  */
@@ -18,7 +18,7 @@ include '../../../Components/header.php';
     </p>
     <div>
         <a href="https://ukbusinessdatabases.club" target="_blank" rel="noopener" class="btn-primary">Visitar Web →</a>
-        <a href="/PabloCirre/paginas/OpenData/" class="link-secondary">Volver a OpenData</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/OpenData/" class="link-secondary">Volver a OpenData</a>
     </div>
 </section>
 
@@ -218,7 +218,7 @@ include '../../../Components/header.php';
     <div style="max-width: 500px; margin: 0 auto;">
         <a href="https://ukbusinessdatabases.club" target="_blank" rel="noopener" class="btn-primary"
             style="margin-right: 10px;">Ir a ukbusinessdatabases.club</a>
-        <a href="/PabloCirre/paginas/About-Me/" class="link-secondary">Contactar</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/About-Me/" class="link-secondary">Contactar</a>
     </div>
 </div>
 

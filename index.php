@@ -21,8 +21,8 @@ include 'Components/header.php';
         España.
     </p>
     <div>
-        <a href="/PabloCirre/paginas/Projects/" class="btn-primary">Ver Proyectos</a>
-        <a href="/PabloCirre/paginas/About-Me/" class="link-secondary">Leer Biografía</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/Projects/" class="btn-primary">Ver Proyectos</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/About-Me/" class="link-secondary">Leer Biografía</a>
     </div>
 </section>
 
@@ -137,7 +137,7 @@ include 'Components/header.php';
                 <span class="pm-value">Unity</span>
             </div>
         </div>
-        <a href="/PabloCirre/paginas/VideoGames/" class="project-link">Ver más →</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/VideoGames/" class="project-link">Ver más →</a>
     </div>
 
     <div class="project-card">
@@ -157,7 +157,7 @@ include 'Components/header.php';
                 <span class="pm-value">99.8%</span>
             </div>
         </div>
-        <a href="/PabloCirre/Tools/verificador-email/" class="project-link">Ver más →</a>
+        <a href="<?php echo BASE_URL; ?>/Tools/verificador-email/" class="project-link">Ver más →</a>
     </div>
 
     <div class="project-card">
@@ -177,7 +177,7 @@ include 'Components/header.php';
                 <span class="pm-value">Turismo</span>
             </div>
         </div>
-        <a href="/PabloCirre/paginas/OpenData/" class="project-link">Ver más →</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/OpenData/" class="project-link">Ver más →</a>
     </div>
 
 </div>
@@ -200,7 +200,7 @@ include 'Components/header.php';
             Hoy divido mi tiempo entre optimizar infraestructura de datos y dirigir videojuegos narrativos en
             Verne Games.
         </p>
-        <a href="/PabloCirre/paginas/About-Me/" class="link-secondary">Leer Biografía Completa</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/About-Me/" class="link-secondary">Leer Biografía Completa</a>
     </div>
 </div>
 
@@ -210,7 +210,7 @@ include 'Components/header.php';
     <p style="color: #666; margin-bottom: 30px;">Disponible para consultoría en arquitectura Big Data y Diseño
         de Videojuegos.</p>
 
-    <form class="contact-form" action="/PabloCirre/paginas/About-Me/" method="get">
+    <form class="contact-form" action="<?php echo BASE_URL; ?>/paginas/About-Me/" method="get">
         <input type="email" name="email" placeholder="introduce_tu_email@dominio.com" required>
         <button type="submit" class="btn-primary">Iniciar Contacto</button>
     </form>

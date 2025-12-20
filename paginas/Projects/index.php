@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Projects - Portfolio y Casos de Éxito
  */
@@ -46,7 +46,7 @@ include '../../Components/header.php';
                 <span class="pm-value">15+</span>
             </div>
         </div>
-        <a href="/PabloCirre/paginas/OpenData/" class="project-link">Ver más →</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/OpenData/" class="project-link">Ver más →</a>
     </div>
 
     <!-- Project 2: KaijuVerifier -->
@@ -71,7 +71,7 @@ include '../../Components/header.php';
                 <span class="pm-value">4.9</span>
             </div>
         </div>
-        <a href="/PabloCirre/Tools/verificador-email/" class="project-link">Ver más →</a>
+        <a href="<?php echo BASE_URL; ?>/Tools/verificador-email/" class="project-link">Ver más →</a>
     </div>
 
     <!-- Project 3: Verne Games -->
@@ -96,7 +96,7 @@ include '../../Components/header.php';
                 <span class="pm-value">RPG</span>
             </div>
         </div>
-        <a href="/PabloCirre/paginas/VideoGames/" class="project-link">Ver más →</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/VideoGames/" class="project-link">Ver más →</a>
     </div>
 
     <!-- Project 4: CompaniesData.cloud -->
@@ -145,7 +145,7 @@ include '../../Components/header.php';
                 <span class="pm-value">4.8</span>
             </div>
         </div>
-        <a href="/PabloCirre/paginas/Experiences/" class="project-link">Ver más →</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/Experiences/" class="project-link">Ver más →</a>
     </div>
 
     <!-- Project 6: Servidor3000 -->
