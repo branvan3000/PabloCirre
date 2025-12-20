@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Cirre - 2001</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eurostile:wght@400&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Note: Eurostile is not free on Google Fonts, using a fallback or similar if available. 
+           Using Roboto as main, and a system font stack for the retro feel if Eurostile fails. */
+        :root {
+            --bg-color: #f2f2f2;
+            --accent-color: #ff3b30;
+            /* 2001 Red */
+            --glass-bg: rgba(255, 255, 255, 0.8);
+            --text-color: #111;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .orbit-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw;
+            height: 80vw;
+            max-width: 800px;
+            max-height: 800px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .orbit-container::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 60%;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+        }
+
+        .planet {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--accent-color);
+            transform: translate(-50%, -50%);
+        }
+
+        .main-interface {
+            width: 100%;
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            padding: 20px;
+        }
+
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            font-family: 'Arial', sans-serif;
+            /* Fallback for Eurostile feel */
+            font-size: 4rem;
+            font-weight: 300;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 40px;
+            max-width: 400px;
+        }
+
+        .card-stack {
+            position: relative;
+            height: 500px;
+            perspective: 1000px;
+        }
+
+        .glass-card {
+            position: absolute;
+            width: 100%;
+            height: 250px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .glass-card:nth-child(1) {
+            top: 0;
+            z-index: 3;
+            transform: scale(1);
+        }
+
+        .glass-card:nth-child(2) {
+            top: 60px;
+            z-index: 2;
+            transform: scale(0.95);
+            opacity: 0.8;
+        }
+
+        .glass-card:nth-child(3) {
+            top: 120px;
+            z-index: 1;
+            transform: scale(0.9);
+            opacity: 0.6;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-20px) scale(1.02) !important;
+            opacity: 1 !important;
+            z-index: 10;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .card-desc {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .pill-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #111;
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .pill-btn:hover {
+            background: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .main-interface {
+                grid-template-columns: 1fr;
+            }
+
+            .card-stack {
+                height: 400px;
+                margin-top: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="orbit-container">
+        <div class="planet"></div>
+    </div>
+
+    <div class="main-interface">
+        <div class="hero-section">
+            <h1>Pablo Cirre</h1>
+            <p>Exploring the frontiers of digital interaction. Game design, data architecture, and web technologies.</p>
+            <div>
+                <a href="#" class="pill-btn">Initialize</a>
+            </div>
+        </div>
+
+        <div class="card-stack">
+            <div class="glass-card">
+                <h3 class="card-title">Verne Games</h3>
+                <p class="card-desc">Narrative adventures in pixel art. "The Shape of Fantasy" - Available now.</p>
+            </div>
+            <div class="glass-card">
+                <h3 class="card-title">KaijuVerifier</h3>
+                <p class="card-desc">Advanced email verification API. Precision and speed for marketers.</p>
+            </div>
+            <div class="glass-card">
+                <h3 class="card-title">Central Data</h3>
+                <p class="card-desc">B2B Data solutions. Massive database architecture.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

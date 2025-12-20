@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Cirre - Modern Swiss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #e6e6e6;
+            --text-color: #000;
+            --accent-color: #0040ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .grid-wrapper {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px;
+            max-width: 1600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        header {
+            grid-column: span 12;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 80px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .hero-title {
+            grid-column: span 8;
+            font-size: 6vw;
+            font-weight: 800;
+            line-height: 0.9;
+            letter-spacing: -0.03em;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title span {
+            color: var(--accent-color);
+            display: block;
+            transform: skewX(-10deg);
+        }
+
+        .hero-desc {
+            grid-column: span 4;
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding-top: 20px;
+            border-top: 2px solid #000;
+        }
+
+        .project-card {
+            grid-column: span 4;
+            background: #fff;
+            height: 400px;
+            position: relative;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translate(-10px, -10px);
+            box-shadow: 10px 10px 0 #000;
+            z-index: 10;
+        }
+
+        .card-num {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #ddd;
+        }
+
+        .card-title {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .card-tags {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background: #000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            border-radius: 20px;
+        }
+
+        .floating-cube {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: var(--accent-color);
+            top: 20%;
+            right: 10%;
+            transform: rotate(45deg);
+            z-index: 1;
+            mix-blend-mode: multiply;
+            animation: spin 10s infinite linear;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .project-card {
+                grid-column: span 6;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                grid-column: span 12;
+                font-size: 15vw;
+            }
+
+            .hero-desc {
+                grid-column: span 12;
+            }
+
+            .project-card {
+                grid-column: span 12;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-wrapper">
+        <header>
+            <div class="logo">PABLO CIRRE</div>
+            <div style="font-weight: 800;">AVAILABLE 2024</div>
+        </header>
+
+        <div class="floating-cube"></div>
+
+        <div class="hero-title">
+            CREATING<br>
+            <span>DIGITAL</span><br>
+            IMPACT.
+        </div>
+
+        <div class="hero-desc">
+            <p>Specialized in high-performance web architecture, data verification, and interactive storytelling.</p>
+        </div>
+
+        <div class="project-card">
+            <div class="card-num">01</div>
+            <div>
+                <h3 class="card-title">Verne Games</h3>
+                <div class="card-tags">
+                    <span class="tag">Unity</span>
+                    <span class="tag">Pixel Art</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card" style="background: #000; color: #fff;">
+            <div class="card-num" style="color: #333;">02</div>
+            <div>
+                <h3 class="card-title">KaijuVerifier</h3>
+                <div class="card-tags">
+                    <span class="tag" style="background: #fff; color: #000;">API</span>
+                    <span class="tag" style="background: #fff; color: #000;">SaaS</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="card-num">03</div>
+            <div>
+                <h3 class="card-title">Central Data</h3>
+                <div class="card-tags">
+                    <span class="tag">Big Data</span>
+                    <span class="tag">B2B</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Cirre - Swiss Glass 3D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #eef2f5;
+            --text-color: #1a1a1a;
+            --accent-color: #0055ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            padding: 60px;
+            background-image: radial-gradient(#d0d0d0 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 30px;
+        }
+
+        .hero-text {
+            grid-column: span 8;
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -2px;
+            margin-bottom: 80px;
+            color: #222;
+        }
+
+        .glass-card {
+            grid-column: span 4;
+            height: 450px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow:
+                0 20px 40px rgba(0, 0, 0, 0.05),
+                0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow:
+                0 30px 60px rgba(0, 0, 0, 0.1),
+                0 1px 3px rgba(0, 0, 0, 0.05);
+            z-index: 10;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .card-num {
+            font-size: 1.2rem;
+            font-weight: 600;
+            opacity: 0.4;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+        }
+
+        .card-body h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .card-body p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .card-footer {
+            display: flex;
+            gap: 10px;
+        }
+
+        .tag {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 6px 12px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Subtle gradient blob behind cards */
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+            opacity: 0;
+            transition: opacity 0.4s;
+            pointer-events: none;
+        }
+
+        .glass-card:hover::before {
+            opacity: 1;
+        }
+
+        @media (max-width: 1024px) {
+            .glass-card {
+                grid-column: span 6;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-text {
+                grid-column: span 12;
+                font-size: 3rem;
+            }
+
+            .glass-card {
+                grid-column: span 12;
+            }
+
+            body {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">PABLO CIRRE</div>
+            <nav>
+                <a href="#" style="text-decoration: none; color: #111; font-weight: 600;">Menu</a>
+            </nav>
+        </header>
+
+        <div class="grid-layout">
+            <div class="hero-text">
+                Selected Work<br>
+                <span style="color: #888;">2010 — 2024</span>
+            </div>
+
+            <div class="glass-card">
+                <div class="card-header">
+                    <span class="card-num">01</span>
+                    <span class="card-icon">🎮</span>
+                </div>
+                <div class="card-body">
+                    <h3>Verne Games</h3>
+                    <p>Director & Producer. Creating narrative-driven pixel art adventures.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="tag">Game Dev</span>
+                    <span class="tag">Unity</span>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <div class="card-header">
+                    <span class="card-num">02</span>
+                    <span class="card-icon">🛡️</span>
+                </div>
+                <div class="card-body">
+                    <h3>KaijuVerifier</h3>
+                    <p>High-performance email verification API for marketing professionals.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="tag">SaaS</span>
+                    <span class="tag">API</span>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <div class="card-header">
+                    <span class="card-num">03</span>
+                    <span class="card-icon">📊</span>
+                </div>
+                <div class="card-body">
+                    <h3>Central Data</h3>
+                    <p>Massive B2B database architecture for the tourism sector.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="tag">Big Data</span>
+                    <span class="tag">B2B</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Micro-tilt effect
+        const cards = document.querySelectorAll('.glass-card');
+
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = ((y - centerY) / centerY) * -2; // Max 2deg rotation
+                const rotateY = ((x - centerX) / centerX) * 2;
+
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+            });
+        });
+    </script>
+
+</body>
+
+</html>

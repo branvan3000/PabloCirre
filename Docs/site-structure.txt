@@ -1,0 +1,166 @@
+PABLO CIRRE WEBSITE - SITE STRUCTURE
+======================================
+
+URL Routes (English Folders, Spanish Content)
+----------------------------------------------
+
+/                         → Home (Inicio)
+/paginas/Projects/        → Complete Portfolio (Portfolio + Client Success Cases)
+/paginas/OpenData/        → Big Data & Business Databases
+/Tools/verificador-email/ → KaijuVerifier & Email Verification (TOOL)
+/paginas/VideoGames/      → Verne Games & Indie Projects
+/paginas/Experiences/     → Training & Video Experiences
+/paginas/Services/        → Services & Consulting
+/paginas/Knowledge/       → Knowledge Base / Technical Blog
+/paginas/about-me/        → Personal Bio + Contact
+
+
+Main Site Title
+---------------
+"Big Data, Email Intelligence, Formación & Experiencias en Vídeo"
+
+
+Page Descriptions
+-----------------
+
+HOME (/)
+  - Hero section with main title and CTAs
+  - Metrics panels (60s console style)
+  - Featured projects summary
+  - Services preview
+  - Integrated contact form
+
+PROJECTS (/paginas/Projects/)
+  - Complete portfolio showcase
+  - All projects with detailed cards
+  - INCLUDES: Success cases and client testimonials
+  - Category filtering (Big Data, SaaS, Video Games, Training)
+  - Project metrics and technologies
+  - Client logos and partnerships
+
+OPENDATA - BUSINESS DATABASES (/paginas/OpenData/)
+  - Focus on Centraldecomunicacion.es
+  - Big Data architecture explanation
+  - Database of 1.4M companies in Spain
+  - B2B tourism sector solutions
+  - Open business data
+  - Integration capabilities
+  - 15+ European countries
+
+EMAIL VERIFIER (/Tools/verificador-email/)
+  - KaijuVerifier product page
+  - Email verification API features
+  - Speed and accuracy metrics (50ms, 99.8%)
+  - API documentation links
+  - Pricing and plans
+  - Demo tools
+
+VIDEO GAMES (/paginas/VideoGames/)
+  - Verne Games showcase
+  - "The Shape of Fantasy" details
+  - Video game development process
+  - Unity/C# technical stack
+  - Steam integration
+  - Video experiences and gameplays
+
+EXPERIENCES / TRAINING (/paginas/Experiences/)
+  - Educational content
+  - Courses and workshops at Chamber of Commerce
+  - Training videos and interactive experiences
+  - Corporate training
+  - Workshops
+  - Video experiences
+
+SERVICES (/paginas/Services/)
+  - Consulting services
+  - Big Data solutions development
+  - Email verification system implementation
+  - Video game development
+  - Corporate training
+  - Data architecture
+  - Plans and pricing
+
+KNOWLEDGE (/paginas/Knowledge/)
+  - Technical blog
+  - Articles and tutorials
+  - Knowledge base
+  - Developer resources
+  - Guides and documentation
+  - Tips and best practices
+  - Downloadable resources
+
+ABOUT ME (/paginas/about-me/)
+  - Personal biography
+  - Career timeline (VR experiments 1997 to present)
+  - Skills and expertise
+  - Teaching experience at Chamber of Commerce
+  - Education and certifications
+  - Professional milestones
+  - INTEGRATED CONTACT FORM
+  - Availability for hiring
+  - Social media links
+
+
+Design Notes
+------------
+- Swiss minimalism + 60s console aesthetic
+- Color palette: Gray (#e0e0e0, #d4d4d4), Orange (#ff4400), Teal (#00ccaa)
+- Interactive elements: dials, switches, indicator lights
+- Typography: Inter, Space Grotesk, IBM Plex Mono
+- Responsive 12-column grid layout
+
+
+Folder Organization
+-------------------
+
+📁 paginas/     → Site information pages (7 pages) - English folder names
+📁 Tools/       → Tools and applications (verificador-email)
+📁 assets/      → CSS, JS, images
+📁 includes/    → Header, footer, config
+📁 Templates/   → 26 reference templates
+📁 Docs/        → Project documentation
+
+
+Structure Changes
+-----------------
+✅ RENAMED: sobre-mi/ → about-me/
+✅ RENAMED: videojuegos/ → VideoGames/
+✅ RENAMED: servicios/ → Services/
+✅ RENAMED: proyectos/ → Projects/
+✅ RENAMED: Conocimientos/ → Knowledge/
+✅ RENAMED: bases-de-datos-empresas/ → OpenData/
+✅ RENAMED: formacion/ → Experiences/
+
+
+SEO - Keywords Spain
+--------------------
+- Base de datos empresas España
+- OpenData empresas España
+- Verificador email España
+- Big Data turismo
+- Formación desarrollo web Granada
+- Servicios consultoría Big Data
+- Profesor desarrollo web Cámara Comercio
+- Desarrollador videojuegos indie Granada
+- API verificación correo electrónico
+- Blog desarrollo web España
+- 1.4 millones empresas España
+
+
+Areas of Expertise
+------------------
+1. Big Data / OpenData - Massive business databases
+2. Email Intelligence - Email verification and validation
+3. Training - Teaching at Chamber of Commerce (Experiences)
+4. Video Experiences - Video games and multimedia content
+5. Services - Consulting and development
+6. Knowledge - Technical blog and resources
+
+
+Site Language
+-------------
+- Primary language: Spanish (Spain)
+- Folder names: English (for clean URLs)
+- Content: Spanish
+- lang="es"
+- Optimized for Spain search engines

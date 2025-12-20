@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Cirre - Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fbfbfd;
+            --text-color: #1d1d1f;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.5);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(251, 251, 253, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+        }
+
+        .nav-content {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.8rem;
+            margin-left: 30px;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+        }
+
+        .hero {
+            padding-top: 150px;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #86868b;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .btn-pill {
+            display: inline-block;
+            background: #0071e3;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .btn-pill:hover {
+            background: #0077ed;
+        }
+
+        .grid-showcase {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 0 20px 100px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 30px;
+            padding: 40px;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: scale(1.01);
+        }
+
+        .card.dark {
+            background: #000;
+            color: #fff;
+        }
+
+        .card-category {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            opacity: 0.7;
+        }
+
+        .card-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: -0.01em;
+        }
+
+        .card-desc {
+            font-size: 1.1rem;
+            max-width: 300px;
+            line-height: 1.4;
+        }
+
+        .card-img {
+            margin-top: auto;
+            width: 80%;
+            height: 250px;
+            background: #eee;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .card.dark .card-img {
+            background: #333;
+        }
+
+        .full-width {
+            grid-column: span 2;
+            height: 600px;
+            background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f7 100%);
+        }
+
+        @media (max-width: 768px) {
+            .grid-showcase {
+                grid-template-columns: 1fr;
+            }
+
+            .full-width {
+                grid-column: span 1;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <div class="logo"> Pablo Cirre</div>
+            <div class="nav-links">
+                <a href="#">Projects</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Pablo Cirre.</h1>
+        <p>Director. Developer. Educator.<br>Pro in every way.</p>
+        <a href="#" class="btn-pill">Learn more</a>
+    </section>
+
+    <section class="grid-showcase">
+
+        <div class="card full-width">
+            <div class="card-category">New Release</div>
+            <h2 class="card-title">The Shape of Fantasy</h2>
+            <p class="card-desc">A narrative adventure that redefines the genre.</p>
+            <div class="card-img"
+                style="background: url('https://via.placeholder.com/800x400/ccc/fff?text=Game+Art') center/cover;">
+            </div>
+        </div>
+
+        <div class="card dark">
+            <div class="card-category">SaaS</div>
+            <h2 class="card-title">KaijuVerifier</h2>
+            <p class="card-desc">Powerful. Precise. Clean.</p>
+            <div class="card-img"
+                style="background: url('https://via.placeholder.com/400x300/222/555?text=Interface') center/cover;">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-category">Big Data</div>
+            <h2 class="card-title">Central Data</h2>
+            <p class="card-desc">Millions of records.<br>Instant access.</p>
+            <div class="card-img"
+                style="background: url('https://via.placeholder.com/400x300/ddd/fff?text=Data+Grid') center/cover;">
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

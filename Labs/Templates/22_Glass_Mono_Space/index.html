@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Cirre - Glass Mono</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #e0e0e0;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Mono', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            padding: 40px;
+            background-image: radial-gradient(#222 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 250px 1fr 300px;
+            grid-template-rows: auto 1fr;
+            gap: 20px;
+            max-width: 1600px;
+            margin: 0 auto;
+            height: calc(100vh - 80px);
+        }
+
+        header {
+            grid-column: span 3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar {
+            grid-row: 2;
+        }
+
+        .nav-item {
+            padding: 15px;
+            border-bottom: 1px solid var(--glass-border);
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-item:last-child {
+            border-bottom: none;
+        }
+
+        .main-view {
+            grid-row: 2;
+            overflow-y: auto;
+        }
+
+        .project-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid #333;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: #fff;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .project-meta {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .stats-panel {
+            grid-row: 2;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .stat-val {
+            font-weight: 500;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #333;
+            margin-top: 5px;
+            border-radius: 2px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #fff;
+            width: 70%;
+        }
+
+        @media (max-width: 1024px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                height: auto;
+            }
+
+            header {
+                grid-column: span 1;
+            }
+
+            .sidebar,
+            .main-view,
+            .stats-panel {
+                grid-row: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard-grid">
+        <header>
+            <div class="logo">PABLO CIRRE // DASHBOARD</div>
+            <div style="font-size: 0.8rem;">V.2.0.24</div>
+        </header>
+
+        <aside class="glass-panel sidebar">
+            <div class="nav-item active">
+                <span>Overview</span>
+                <span>→</span>
+            </div>
+            <div class="nav-item">
+                <span>Projects</span>
+                <span>3</span>
+            </div>
+            <div class="nav-item">
+                <span>Analytics</span>
+                <span>↗</span>
+            </div>
+            <div class="nav-item">
+                <span>Settings</span>
+                <span>⚙</span>
+            </div>
+        </aside>
+
+        <main class="glass-panel main-view">
+            <h2 style="margin-bottom: 20px; font-weight: 300; border-bottom: 1px solid #333; padding-bottom: 10px;">
+                Active Projects</h2>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-title">Verne Games</span>
+                    <span class="project-meta">GAME DEV</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #aaa; margin-bottom: 15px;">
+                    Narrative adventure development. "The Shape of Fantasy" released on Steam.
+                </p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%;"></div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-title">KaijuVerifier</span>
+                    <span class="project-meta">SAAS API</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #aaa; margin-bottom: 15px;">
+                    Email verification service. High throughput processing.
+                </p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-title">Central Data</span>
+                    <span class="project-meta">BIG DATA</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #aaa; margin-bottom: 15px;">
+                    B2B Database architecture. 1.4M records indexed.
+                </p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 92%;"></div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="glass-panel stats-panel">
+            <h3 style="margin-bottom: 20px; font-size: 1rem;">System Metrics</h3>
+
+            <div class="stat-row">
+                <span>Uptime</span>
+                <span class="stat-val">99.9%</span>
+            </div>
+            <div class="stat-row">
+                <span>Requests</span>
+                <span class="stat-val">12k/m</span>
+            </div>
+            <div class="stat-row">
+                <span>Storage</span>
+                <span class="stat-val">4.2TB</span>
+            </div>
+
+            <div style="margin-top: 40px; padding: 15px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+                <div style="font-size: 0.8rem; margin-bottom: 5px;">LATEST LOG</div>
+                <div style="font-size: 0.7rem; color: #888;">> Deployment successful<br>> Cache cleared<br>> Monitoring
+                    active</div>
+            </div>
+        </aside>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Cirre - Data Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #e0e0e0;
+            --panel-bg: #d4d4d4;
+            --text-color: #333;
+            --accent-color: #ff4400;
+            --indicator-color: #00ccaa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .console-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 200px);
+            gap: 10px;
+            max-width: 1200px;
+            width: 100%;
+            background: #bbb;
+            padding: 10px;
+            border: 2px solid #999;
+            box-shadow:
+                inset 0 0 20px rgba(0, 0, 0, 0.1),
+                0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .panel {
+            background: var(--panel-bg);
+            border: 1px solid #aaa;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.5), inset -2px -2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .panel-header {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #999;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .panel-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .metric-large {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #222;
+        }
+
+        .metric-label {
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .knob {
+            width: 40px;
+            height: 40px;
+            background: #333;
+            border-radius: 50%;
+            border: 2px solid #666;
+            position: relative;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .knob::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 15px;
+            background: #fff;
+        }
+
+        .switch-row {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .switch {
+            width: 20px;
+            height: 40px;
+            background: #ccc;
+            border: 1px solid #999;
+            position: relative;
+        }
+
+        .switch::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 2px;
+            width: 14px;
+            height: 14px;
+            background: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .switch.active::after {
+            top: auto;
+            bottom: 5px;
+            background: var(--accent-color);
+        }
+
+        .light {
+            width: 15px;
+            height: 15px;
+            background: #555;
+            border-radius: 50%;
+            border: 1px solid #333;
+        }
+
+        .light.on {
+            background: var(--indicator-color);
+            box-shadow: 0 0 10px var(--indicator-color);
+        }
+
+        .large-panel {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .chart-placeholder {
+            width: 100%;
+            height: 100%;
+            background:
+                repeating-linear-gradient(90deg,
+                    transparent,
+                    transparent 19px,
+                    #999 20px),
+                repeating-linear-gradient(0deg,
+                    transparent,
+                    transparent 19px,
+                    #999 20px);
+            background-size: 20px 20px;
+            border: 1px solid #999;
+            position: relative;
+        }
+
+        .chart-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            border-top: 2px solid var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .console-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .large-panel {
+                grid-column: span 1;
+                height: 300px;
+            }
+
+            .panel {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="console-grid">
+
+        <div class="panel large-panel">
+            <div class="panel-header">
+                <span>MAIN_METRICS</span>
+                <div class="light on"></div>
+            </div>
+            <div class="panel-content">
+                <div class="chart-placeholder">
+                    <div class="chart-line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">
+                <span>TOTAL_RECORDS</span>
+            </div>
+            <div class="panel-content">
+                <div class="metric-large">1.4M</div>
+                <div class="metric-label">ENTRIES</div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">
+                <span>SYSTEM_STATUS</span>
+            </div>
+            <div class="panel-content">
+                <div class="switch-row">
+                    <div class="switch active"></div>
+                    <div class="switch active"></div>
+                    <div class="switch"></div>
+                </div>
+                <div class="metric-label" style="margin-top: 15px;">OPTIMAL</div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">
+                <span>VERIFICATION</span>
+            </div>
+            <div class="panel-content">
+                <div class="knob"></div>
+                <div class="metric-label" style="margin-top: 10px;">SPEED</div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">
+                <span>CLIENTS</span>
+            </div>
+            <div class="panel-content">
+                <div class="metric-large">1K+</div>
+                <div class="metric-label">ACTIVE</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

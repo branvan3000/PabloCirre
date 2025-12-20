@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Cirre - Visual Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Work+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #000;
+            --text-color: #fff;
+            --hover-overlay: rgba(255, 255, 255, 0.9);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            padding: 40px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            mix-blend-mode: difference;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Syncopate', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 50vh;
+        }
+
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #111;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .item-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--hover-overlay);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.4s;
+            color: #000;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .grid-item:hover .item-overlay {
+            opacity: 1;
+        }
+
+        .item-category {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+        }
+
+        .item-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .item-desc {
+            max-width: 300px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Special Items */
+        .grid-item.large {
+            grid-column: span 2;
+        }
+
+        .grid-item.text-only {
+            background-color: #1a1a1a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px;
+        }
+
+        .grid-item.text-only h2 {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .grid-item.text-only p {
+            font-size: 1.2rem;
+            color: #aaa;
+            max-width: 400px;
+        }
+
+        @media (max-width: 1024px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-item.large {
+                grid-column: span 1;
+            }
+
+            header {
+                padding: 20px;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Pablo Cirre</div>
+        <nav>
+            <a href="#">Projects</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="grid-container">
+
+        <div class="grid-item text-only">
+            <h2>Visual<br>Archive</h2>
+            <p>A collection of digital artifacts, game worlds, and data structures created since 1997.</p>
+        </div>
+
+        <div class="grid-item large">
+            <img src="https://via.placeholder.com/1200x800/222/555?text=The+Shape+of+Fantasy" alt="Verne Games">
+            <div class="item-overlay">
+                <span class="item-category">Video Game</span>
+                <h3 class="item-title">The Shape of Fantasy</h3>
+                <p class="item-desc">A narrative-driven adventure where you play as Jules Verne in a parallel universe.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <img src="https://via.placeholder.com/600x800/333/666?text=KaijuVerifier+UI" alt="KaijuVerifier">
+            <div class="item-overlay">
+                <span class="item-category">SaaS Interface</span>
+                <h3 class="item-title">KaijuVerifier</h3>
+                <p class="item-desc">Designing trust in email marketing through clean, efficient UI.</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <img src="https://via.placeholder.com/600x800/444/777?text=Central+Data+Map" alt="Centraldecomunicacion">
+            <div class="item-overlay">
+                <span class="item-category">Data Visualization</span>
+                <h3 class="item-title">Centraldecomunicacion</h3>
+                <p class="item-desc">Mapping the tourism industry in Spain through millions of data points.</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <img src="https://via.placeholder.com/600x800/555/888?text=Teaching+Code" alt="Teaching">
+            <div class="item-overlay">
+                <span class="item-category">Education</span>
+                <h3 class="item-title">Chamber of Commerce</h3>
+                <p class="item-desc">Mentoring the next generation of web developers in Granada.</p>
+            </div>
+        </div>
+
+        <div class="grid-item large">
+            <img src="https://via.placeholder.com/1200x800/111/444?text=Early+VR+Prototypes" alt="VR 1997">
+            <div class="item-overlay">
+                <span class="item-category">Archive 1997</span>
+                <h3 class="item-title">VR Origins</h3>
+                <p class="item-desc">Early experiments in virtual reality and 3D web environments.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

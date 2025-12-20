@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Cirre - 3D Type</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+            position: relative;
+        }
+
+        .big-word {
+            font-family: 'Anton', sans-serif;
+            font-size: 25vw;
+            line-height: 0.8;
+            text-transform: uppercase;
+            color: #fff;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(10deg) rotateY(-10deg);
+            text-shadow:
+                1px 1px 0 #000,
+                2px 2px 0 #000,
+                3px 3px 0 #000,
+                4px 4px 0 #000,
+                5px 5px 0 #000,
+                6px 6px 0 #000,
+                7px 7px 0 #000,
+                8px 8px 0 #000,
+                9px 9px 0 #000,
+                10px 10px 0 #000,
+                20px 20px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.1s;
+            cursor: default;
+            -webkit-text-stroke: 2px #000;
+        }
+
+        .overlay-content {
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            max-width: 400px;
+        }
+
+        .overlay-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .overlay-content p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .big-word {
+                font-size: 35vw;
+            }
+
+            header {
+                padding: 20px;
+            }
+
+            .overlay-content {
+                bottom: 20px;
+                left: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Pablo Cirre</div>
+        <div>MENU</div>
+    </header>
+
+    <div class="hero-container">
+        <div class="big-word" id="target">PABLO</div>
+
+        <div class="overlay-content">
+            <h2>Digital Creator</h2>
+            <p>From Granada to the Metaverse. Building games, data systems, and web experiences.</p>
+        </div>
+
+        <div class="scroll-indicator">SCROLL TO EXPLORE</div>
+    </div>
+
+    <script>
+        const target = document.getElementById('target');
+        const container = document.querySelector('.hero-container');
+
+        container.addEventListener('mousemove', (e) => {
+            const x = (window.innerWidth / 2 - e.pageX) / 20;
+            const y = (window.innerHeight / 2 - e.pageY) / 20;
+
+            target.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
+        });
+    </script>
+
+</body>
+
+</html>

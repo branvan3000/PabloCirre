@@ -1,0 +1,288 @@
+================================================================================
+PABLO CIRRE PORTFOLIO - PROJECT STRUCTURE FINAL
+================================================================================
+
+Última actualización: 2025-12-04
+Estado: ESTRUCTURA FINAL APROBADA
+
+================================================================================
+DIRECTORIO RAÍZ
+================================================================================
+
+c:\wamp64\www\PabloCirre\
+
+Estructura completa:
+
+PabloCirre/
+├── index.php                    (Página principal del sitio)
+├── paginas/                     (7 páginas del sitio - carpetas en inglés)
+│   ├── About-Me/
+│   ├── Experiences/
+│   ├── Knowledge/
+│   ├── OpenData/
+│   ├── Projects/
+│   ├── Services/
+│   └── VideoGames/
+├── Tools/                       (Herramientas SaaS)
+│   ├── index.php
+│   └── verificador-email/
+├── assets/                      (Recursos estáticos)
+│   ├── css/
+│   │   └── main.css
+│   ├── js/
+│   │   └── main.js
+│   └── images/
+├── includes/                    (Archivos PHP comunes)
+│   ├── header.php
+│   ├── footer.php
+│   └── config.php (pendiente)
+├── Templates/                   (26 templates de diseño)
+│   ├── 01_Glossy_Editorial/
+│   ├── 02_Minimalismo_Suizo/
+│   ├── ... (22 más)
+│   └── 26_Master_Portfolio/     (Base del diseño actual)
+└── Docs/                        (Documentación del proyecto)
+    ├── site-structure.txt
+    ├── project-structure.txt    (Este archivo)
+    └── SEO-strategy.txt
+
+
+================================================================================
+RUTAS URL FINALES (PRODUCCIÓN)
+================================================================================
+
+HOME
+└── http://localhost/PabloCirre/
+    └── /
+
+PÁGINAS PRINCIPALES
+├── /paginas/Projects/              (Portfolio + Casos de éxito)
+├── /paginas/OpenData/              (Big Data & Bases de datos empresas)
+├── /paginas/Experiences/           (Formación & Experiencias en Vídeo)
+├── /paginas/Services/              (Servicios & Consultoría)
+├── /paginas/Knowledge/             (Blog técnico & Base de conocimiento)
+├── /paginas/VideoGames/            (Verne Games & Videojuegos indie)
+└── /paginas/About-Me/              (Biografía personal + Contacto)
+
+HERRAMIENTAS
+├── /Tools/                         (Página principal de herramientas)
+└── /Tools/verificador-email/       (KaijuVerifier - SaaS Tool)
+
+
+================================================================================
+NAVEGACIÓN PRINCIPAL DEL SITIO (8 ENLACES)
+================================================================================
+
+Header Navigation (Orden final):
+
+1. Projects          →  /PabloCirre/paginas/Projects/
+2. OpenData          →  /PabloCirre/paginas/OpenData/
+3. Tools             →  /PabloCirre/Tools/
+4. Experiences       →  /PabloCirre/paginas/Experiences/
+5. Services          →  /PabloCirre/paginas/Services/
+6. Knowledge         →  /PabloCirre/paginas/Knowledge/
+7. VideoGames        →  /PabloCirre/paginas/VideoGames/
+8. About Me          →  /PabloCirre/paginas/About-Me/
+
+
+================================================================================
+DESCRIPCIÓN DE PÁGINAS
+================================================================================
+
+HOME (/)
+• Hero section: "Big Data, Email Intelligence, Formación & Experiencias en Vídeo"
+• Paneles de métricas estilo consola 60s
+• Grid de proyectos destacados
+• Sección About preview
+• Formulario de contacto
+
+PROJECTS (/paginas/Projects/)
+• Portfolio completo de proyectos
+• Casos de éxito de clientes
+• Testimonios
+• Filtros por categoría: Big Data, SaaS, Videojuegos, Formación
+• Métricas de cada proyecto
+• Logos de clientes
+• Stack tecnológico de cada proyecto
+
+OPENDATA (/paginas/OpenData/)
+• Centraldecomunicacion.es (producto principal)
+• Base de datos: 1.4M empresas en España
+• Cobertura: 15+ países europeos
+• Arquitectura Big Data
+• Soluciones B2B para sector turismo
+• API de integración
+• Datos abiertos empresariales
+
+EXPERIENCES (/paginas/Experiences/)
+• Cursos en Cámara de Comercio
+• Talleres y workshops
+• Formación corporativa
+• Vídeos formativos
+• Experiencias interactivas
+• Certificaciones
+
+SERVICES (/paginas/Services/)
+• Consultoría Big Data
+• Desarrollo de soluciones personalizadas
+• Implementación de sistemas de verificación email
+• Desarrollo de videojuegos
+• Formación empresarial
+• Arquitectura de datos
+• Planes y precios
+
+KNOWLEDGE (/paginas/Knowledge/)
+• Blog técnico
+• Artículos y tutoriales
+• Base de conocimiento
+• Guías paso a paso
+• Documentación técnica
+• Tips y mejores prácticas
+• Recursos descargables
+
+TOOLS (/Tools/)
+• Suite de herramientas profesionales
+• KaijuVerifier (verificación de email)
+• Data Analyzer (próximamente)
+• API Gateway (próximamente)
+• Herramientas SaaS para desarrolladores y marketers
+• APIs de alto rendimiento
+• Documentación y ejemplos de código
+
+VIDEO GAMES (/paginas/VideoGames/)
+• Verne Games (empresa)
+• "The Shape of Fantasy" (juego principal)
+• Proceso de desarrollo
+• Stack: Unity + C#
+• Integración con Steam
+• Gameplays y experiencias en vídeo
+• Pixel art y narrativa
+
+EMAIL VERIFIER (/Tools/verificador-email/)
+• KaijuVerifier (producto SaaS)
+• API de verificación de emails
+• Velocidad: 50ms por email
+• Precisión: 99.8%
+• Documentación API
+• Herramienta de demo
+• Precios y planes
+
+ABOUT ME (/paginas/About-Me/)
+• Biografía personal
+• Timeline: 1997 (VR) hasta presente
+• Habilidades y experiencia
+• Educación y certificaciones
+• Hitos profesionales
+• FORMULARIO DE CONTACTO
+• Disponibilidad para contratación
+• Redes sociales
+
+
+================================================================================
+DISEÑO Y TECNOLOGÍA
+================================================================================
+
+ESTILO VISUAL
+├── Estética: Minimalismo Suizo + Consola años 60
+├── Paleta de colores:
+│   ├── Fondo: #e0e0e0 (gris claro)
+│   ├── Paneles: #d4d4d4 (gris medio)
+│   ├── Texto: #333 (gris oscuro)
+│   ├── Acento: #ff4400 (naranja)
+│   └── Indicador: #00ccaa (teal)
+├── Elementos interactivos:
+│   ├── Diales/knobs giratorios
+│   ├── Interruptores/switches
+│   └── Luces indicadoras parpadeantes
+└── Layout: Grid 12 columnas responsive
+
+TIPOGRAFÍA
+├── Primaria: Inter (300, 400, 500, 600)
+├── Títulos: Space Grotesk (300, 400, 500, 600, 700)
+└── Monoespaciada: IBM Plex Mono (300, 500, 700)
+
+ARCHIVOS
+├── CSS: /assets/css/main.css (completo, 600+ líneas)
+├── JS: /assets/js/main.js (efectos consola 60s)
+└── Template base: /Templates/26_Master_Portfolio/
+
+
+================================================================================
+CONVENCIÓN DE NOMBRES
+================================================================================
+
+CARPETAS
+├── Nombres: Inglés con PascalCase/kebab-case
+├── Ejemplos: Projects, VideoGames, About-Me, OpenData
+└── Razón: URLs limpias, SEO-friendly
+
+CONTENIDO
+├── Idioma: Español (España)
+├── lang="es" en HTML
+└── Optimizado para buscadores España
+
+URL STRUCTURE
+├── Patrón: /paginas/FolderName/
+├── Herramientas: /Tools/tool-name/
+└── Principal: /
+
+
+================================================================================
+SEO - PALABRAS CLAVE OBJETIVO (ESPAÑA)
+================================================================================
+
+PRIMARIAS
+├── Base de datos empresas España
+├── OpenData empresas España
+├── Verificador email España
+├── Big Data turismo
+└── 1.4 millones empresas España
+
+SECUNDARIAS
+├── Formación desarrollo web Granada
+├── Cursos programación web Granada
+├── Servicios consultoría Big Data
+├── Profesor desarrollo web Cámara Comercio
+├── Desarrollador videojuegos indie Granada
+├── API verificación correo electrónico
+└── Blog desarrollo web España
+
+
+================================================================================
+ÁREAS DE ESPECIALIZACIÓN
+================================================================================
+
+1. BIG DATA / OPENDATA
+   └── Bases de datos empresariales masivas (1.4M registros)
+
+2. EMAIL INTELLIGENCE
+   └── Verificación y validación de correos (KaijuVerifier)
+
+3. FORMACIÓN
+   └── Enseñanza en Cámara de Comercio (Experiences)
+
+4. EXPERIENCIAS EN VÍDEO
+   └── Videojuegos indie y contenido multimedia (Verne Games)
+
+5. SERVICIOS
+   └── Consultoría y desarrollo de soluciones
+
+6. CONOCIMIENTOS
+   └── Blog técnico y recursos para desarrolladores
+
+
+================================================================================
+LOCALHOST - URLS DE PRUEBA
+================================================================================
+
+Principal:      http://localhost/PabloCirre/
+Projects:       http://localhost/PabloCirre/paginas/Projects/
+OpenData:       http://localhost/PabloCirre/paginas/OpenData/
+Tools:          http://localhost/PabloCirre/Tools/
+Experiences:    http://localhost/PabloCirre/paginas/Experiences/
+Services:       http://localhost/PabloCirre/paginas/Services/
+Knowledge:      http://localhost/PabloCirre/paginas/Knowledge/
+VideoGames:     http://localhost/PabloCirre/paginas/VideoGames/
+About Me:       http://localhost/PabloCirre/paginas/About-Me/
+Verifier:       http://localhost/PabloCirre/Tools/verificador-email/
+Template:       http://localhost/PabloCirre/Templates/26_Master_Portfolio/

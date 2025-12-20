@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Cirre - The Magazine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fdfbf7;
+            --text-color: #2c2c2c;
+            --accent-color: #c0392b;
+            --border-color: #dcdcdc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px;
+            background: #fff;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.03);
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 4px double var(--text-color);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        .masthead {
+            font-family: 'DM Serif Display', serif;
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .issue-info {
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid var(--text-color);
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        .headline {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .lead {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #444;
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .dropcap {
+            float: left;
+            font-family: 'DM Serif Display', serif;
+            font-size: 5rem;
+            line-height: 0.8;
+            padding-right: 10px;
+            padding-top: 5px;
+            color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .pull-quote {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2rem;
+            color: var(--accent-color);
+            border-top: 2px solid var(--text-color);
+            border-bottom: 2px solid var(--text-color);
+            padding: 20px 0;
+            margin: 40px 0;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .img-container {
+            margin: 30px 0;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: auto;
+            filter: grayscale(100%) contrast(1.2);
+        }
+
+        .caption {
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 5px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .sidebar {
+            background: #f4f4f4;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+
+        .sidebar h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .sidebar strong {
+            display: block;
+            color: var(--accent-color);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-family: sans-serif;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .headline {
+                font-size: 2.5rem;
+            }
+
+            .masthead {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="masthead">The Cirre Chronicle</div>
+            <div class="issue-info">
+                <span>Vol. 24</span>
+                <span>Granada, España</span>
+                <span>Est. 1997</span>
+            </div>
+        </header>
+
+        <article>
+            <h1 class="headline">De la Realidad Virtual al Big Data: Una Odisea Digital</h1>
+            <p class="lead">Cómo un pionero de la web en los 90 se convirtió en el arquitecto de datos detrás de las
+                mayores empresas turísticas de España.</p>
+
+            <div class="img-container">
+                <img src="https://via.placeholder.com/900x400/ccc/333?text=Pablo+Cirre+Workspace" alt="Workspace">
+                <div class="caption">Fig 1. El espacio de trabajo donde nace el código.</div>
+            </div>
+
+            <div class="article-grid">
+                <div>
+                    <p><span class="dropcap">E</span>ra 1997 cuando Pablo Cirre escribió sus primeras líneas de código.
+                        El mundo apenas empezaba a comprender el potencial de internet, pero él ya estaba experimentando
+                        con Realidad Virtual. "Siempre me ha fascinado lo que hay detrás de la pantalla", comenta Cirre
+                        desde su estudio en Granada.</p>
+
+                    <p>Esa curiosidad temprana evolucionó rápidamente. De proyectos experimentales como
+                        <em>Servidor3000</em> y <em>Mensajería Low Cost</em>, Pablo pasó a construir infraestructuras
+                        sólidas que hoy sostienen negocios enteros.</p>
+
+                    <p>Su obra maestra, <strong>Centraldecomunicacion.es</strong>, nació en 2010. Lo que comenzó como
+                        una necesidad de organizar información se transformó en la plataforma de referencia para bases
+                        de datos B2B en el sector turístico español.</p>
+                </div>
+
+                <div>
+                    <div class="sidebar">
+                        <h3>Hitos Destacados</h3>
+                        <ul>
+                            <li>
+                                <strong>2023 - Verne Games</strong>
+                                Lanzamiento de "The Shape of Fantasy" en Steam.
+                            </li>
+                            <li>
+                                <strong>2022 - KaijuVerifier</strong>
+                                Creación del SaaS de verificación de emails.
+                            </li>
+                            <li>
+                                <strong>2015 - Docencia</strong>
+                                Inicio como profesor en la Cámara de Comercio.
+                            </li>
+                        </ul>
+                    </div>
+                    <p style="margin-top: 20px;">Pero Pablo no es solo un hombre de datos. Su pasión por la narrativa lo
+                        llevó a fundar <strong>Verne Games</strong>, donde ejerce como Director y Productor.</p>
+                </div>
+            </div>
+
+            <div class="pull-quote">
+                "No se trata solo de escribir código, se trata de contar historias, ya sea a través de un videojuego o
+                de una visualización de datos."
+            </div>
+
+            <div class="article-grid">
+                <div>
+                    <h3>El Futuro es Verificable</h3>
+                    <p>Su último proyecto, <strong>KaijuVerifier</strong>, aborda uno de los problemas más críticos del
+                        marketing moderno: la calidad de los datos. "Una lista de emails sucia es dinero tirado a la
+                        basura", sentencia.</p>
+                </div>
+                <div>
+                    <h3>Formando a la Nueva Generación</h3>
+                    <p>Como profesor en la Cámara de Comercio, Pablo comparte su experiencia con cientos de alumnos,
+                        enseñando no solo WordPress y tecnologías web, sino la filosofía de crear productos que
+                        perduren.</p>
+                </div>
+            </div>
+
+        </article>
+
+        <footer>
+            <p>Pablo Cirre &copy; 2024. Contacto: hola@pablocirre.es</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

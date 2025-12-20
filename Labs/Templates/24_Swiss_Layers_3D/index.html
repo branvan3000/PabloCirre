@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Cirre - Layers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #212529;
+            --layer-bg: #ffffff;
+            --accent-color: #0d6efd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 100px 20px;
+        }
+
+        header {
+            margin-bottom: 100px;
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 5rem;
+            font-weight: 800;
+            line-height: 0.9;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #6c757d;
+            max-width: 500px;
+        }
+
+        .layer-stack {
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .layer-card {
+            background: var(--layer-bg);
+            padding: 60px;
+            border-radius: 4px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            margin-bottom: -100px;
+            /* Overlap */
+            position: sticky;
+            top: 100px;
+            transition: transform 0.3s ease-out;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .layer-card:nth-child(1) {
+            top: 100px;
+        }
+
+        .layer-card:nth-child(2) {
+            top: 140px;
+        }
+
+        .layer-card:nth-child(3) {
+            top: 180px;
+        }
+
+        .card-num {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #e9ecef;
+            position: absolute;
+            top: 20px;
+            right: 40px;
+        }
+
+        .card-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .card-content {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #495057;
+            max-width: 600px;
+        }
+
+        .tags {
+            margin-top: 30px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .tag {
+            background: #e9ecef;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        footer {
+            margin-top: 200px;
+            padding: 50px 0;
+            border-top: 1px solid #dee2e6;
+            text-align: center;
+            color: #adb5bd;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            .layer-card {
+                padding: 30px;
+                margin-bottom: 20px;
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Pablo Cirre</h1>
+            <div class="subtitle">Director. Developer. Architect.</div>
+        </header>
+
+        <div class="layer-stack">
+
+            <div class="layer-card">
+                <div class="card-num">01</div>
+                <h2 class="card-title">Verne Games</h2>
+                <div class="card-content">
+                    <p>Creating immersive narrative experiences. "The Shape of Fantasy" combines classic pixel art with
+                        modern game design principles.</p>
+                </div>
+                <div class="tags">
+                    <span class="tag">Unity</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">Narrative</span>
+                </div>
+            </div>
+
+            <div class="layer-card">
+                <div class="card-num">02</div>
+                <h2 class="card-title">KaijuVerifier</h2>
+                <div class="card-content">
+                    <p>A robust email verification API designed for high-volume marketing needs. Ensuring clean data and
+                        high deliverability.</p>
+                </div>
+                <div class="tags">
+                    <span class="tag">API</span>
+                    <span class="tag">SaaS</span>
+                    <span class="tag">Data</span>
+                </div>
+            </div>
+
+            <div class="layer-card">
+                <div class="card-num">03</div>
+                <h2 class="card-title">Central Data</h2>
+                <div class="card-content">
+                    <p>The backbone of B2B data in the tourism sector. Managing millions of records with precision and
+                        speed.</p>
+                </div>
+                <div class="tags">
+                    <span class="tag">Big Data</span>
+                    <span class="tag">Architecture</span>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            &copy; 2024 Pablo Cirre. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+
+</html>

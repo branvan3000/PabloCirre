@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Cirre - Mono Swiss 3D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;400;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #000;
+            --text-color: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Archivo', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+            perspective: 1000px;
+        }
+
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(#222 1px, transparent 1px), linear-gradient(90deg, #222 1px, transparent 1px);
+            background-size: 100px 100px;
+            z-index: -1;
+            transform: rotateX(20deg) scale(1.5);
+            transform-origin: 50% 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 150px;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .big-text {
+            font-size: 12vw;
+            font-weight: 900;
+            line-height: 0.8;
+            text-transform: uppercase;
+            mix-blend-mode: difference;
+            transform-style: preserve-3d;
+            margin-bottom: 100px;
+        }
+
+        .word {
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .word:hover {
+            transform: translateZ(50px) rotateY(10deg);
+            color: #ccc;
+        }
+
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .project-item {
+            border-top: 1px solid #333;
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .project-item:last-child {
+            border-bottom: 1px solid #333;
+        }
+
+        .project-item:hover {
+            background: #fff;
+            color: #000;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .project-name {
+            font-size: 4rem;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+
+        .project-cat {
+            font-size: 1rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .floating-img {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            background: #333;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0) rotate(-10deg);
+            transition: transform 0.3s;
+            pointer-events: none;
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        .floating-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-item:hover .floating-img {
+            transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        }
+
+        footer {
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            font-weight: 100;
+        }
+
+        @media (max-width: 768px) {
+            .project-name {
+                font-size: 2rem;
+            }
+
+            .big-text {
+                font-size: 15vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-bg"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo">PABLO CIRRE</div>
+            <div>EST. 1997</div>
+        </header>
+
+        <div class="big-text">
+            <span class="word">DATA</span><br>
+            <span class="word">DESIGN</span><br>
+            <span class="word">CODE</span>
+        </div>
+
+        <div class="project-list">
+            <div class="project-item">
+                <span class="project-name">Verne Games</span>
+                <span class="project-cat">Game Dev</span>
+                <div class="floating-img"><img src="https://via.placeholder.com/300x200/fff/000?text=GAME" alt=""></div>
+            </div>
+            <div class="project-item">
+                <span class="project-name">KaijuVerifier</span>
+                <span class="project-cat">SaaS</span>
+                <div class="floating-img"><img src="https://via.placeholder.com/300x200/fff/000?text=SAAS" alt=""></div>
+            </div>
+            <div class="project-item">
+                <span class="project-name">Central Data</span>
+                <span class="project-cat">Big Data</span>
+                <div class="floating-img"><img src="https://via.placeholder.com/300x200/fff/000?text=DATA" alt=""></div>
+            </div>
+            <div class="project-item">
+                <span class="project-name">Education</span>
+                <span class="project-cat">Teaching</span>
+                <div class="floating-img"><img src="https://via.placeholder.com/300x200/fff/000?text=TEACH" alt="">
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div>Granada, Spain</div>
+            <div>hola@pablocirre.es</div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
