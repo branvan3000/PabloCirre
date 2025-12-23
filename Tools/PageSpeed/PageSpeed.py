@@ -117,7 +117,9 @@ class PageSpeedAuditor:
     def load_local_key() -> Optional[str]:
         """Load key from local file python/PageSpeed/PageSpeedInsightAP1.txt"""
         try:
-            path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "PageSpeedInsightAP1.txt")
+            # Go up 3 levels from Tools/PageSpeed/PageSpeed.py to project root
+            root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            path = os.path.join(root_dir, ".secrets", "PageSpeedInsightAP1.txt")
             if os.path.exists(path):
                 with open(path, "r", encoding="utf-8") as f:
                     return f.read().strip()
@@ -186,7 +188,7 @@ class PageSpeedAuditor:
             except requests.RequestException:
                 continue
 
-        if not root:
+        if root is None:
             # No sitemap → solo la URL base
             return [self.base_url]
 

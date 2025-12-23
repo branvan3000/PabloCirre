@@ -5,22 +5,20 @@
     "preserve": [
         ".well-known",
         ".ftpquota",
-        "users"
+        "cgi-bin",
+        "error_docs"
     ],
     "skip_upload": [
         ".git",
-        ".gitignore",
         ".DS_Store",
+        "Tools",
+        ".vscode",
+        ".idea",
         "__pycache__",
-        "python",
-        "scripts",
-        "docs",
-        "node_modules",
+        ".gitignore",
+        "README.md",
+        "LICENSE",
         ".env",
-        "*.log",
-        "test_emails.csv",
-        "users",
-        "CopiaSegura",
-        "AP1S"
+        ".secrets"
     ]
 }

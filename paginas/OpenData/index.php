@@ -115,7 +115,7 @@ include '../../Components/header.php';
 <!-- Data Structure Breakdown (Full Width) -->
 <section class="structure-section"
     style="width: 100%; background: var(--panel-bg); padding: 80px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); margin-bottom: 80px;">
-    <div class="container">
+    <div class="container layout-grid">
 
         <div style="grid-column: 1 / -1; text-align: center;">
             <h2 class="section-title" style="margin-bottom: 40px; border-top: none;">Estructura del Dato (48 Campos)
@@ -342,7 +342,7 @@ include '../../Components/header.php';
 </section>
 
 <!-- Restart Main Container -->
-<?php $container_class = isset($is_fluid_container) && $is_fluid_container ? 'container-fluid' : 'container'; ?>
+<?php $container_class = isset($is_fluid_container) && $is_fluid_container ? 'container-fluid layout-grid' : 'container layout-grid'; ?>
 <div class="<?php echo $container_class; ?>">
 
     <!-- OpenData Tools Portfolio -->
