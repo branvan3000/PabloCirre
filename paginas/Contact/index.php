@@ -78,89 +78,84 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <script src="https://www.google.com/recaptcha/api.js?render=<?php echo $site_key; ?>"></script>
 
-<!-- WRAPPER GLOBAL PARA AISLAR EL LAYOUT -->
-<div class="custom-contact-container">
-
-    <!-- GRID PRINCIPAL -->
-    <div class="contact-grid">
-
-        <!-- Header Panel: STATUS -->
-        <div class="contact-header">
-            <div
-                style="display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid var(--text-color); padding-bottom: 20px;">
-                <h1 style="font-size: 3.5rem; margin: 0; line-height: 1; font-family: 'Space Grotesk', sans-serif;">
-                    CONTACTO</h1>
-                <div style="font-family: monospace; font-size: 0.9rem; opacity: 0.7;">
-                    ESTADO:
-                    <?php echo $message_sent ? '<span style="color: #00ccaa;">ENVIADO</span>' : '<span style="color: var(--accent-color);">DISPONIBLE</span>'; ?>
-                </div>
+<!-- GRID PRINCIPAL -->
+<div class="grid-row" style="margin-top: 80px; margin-bottom: 40px;">
+    <div class="contact-header" style="grid-column: 1 / -1;">
+        <div
+            style="display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid var(--text-color); padding-bottom: 20px;">
+            <h1 style="font-size: 3.5rem; margin: 0; line-height: 1; font-family: 'Space Grotesk', sans-serif;">
+                CONTACTO</h1>
+            <div style="font-family: monospace; font-size: 0.9rem; opacity: 0.7;">
+                ESTADO:
+                <?php echo $message_sent ? '<span style="color: #00ccaa;">ENVIADO</span>' : '<span style="color: var(--accent-color);">DISPONIBLE</span>'; ?>
             </div>
         </div>
+    </div>
 
-        <!-- Left Column: THE FORM -->
-        <div class="contact-form-col">
+    <!-- Left Column: THE FORM -->
+    <div class="contact-form-col" style="grid-column: 1 / 9;">
 
-            <?php if ($message_sent): ?>
-                <div class="data-panel"
-                    style="background: rgba(0, 204, 170, 0.1); border-color: #00ccaa; text-align: center; padding: 60px;">
-                    <div class="panel-header" style="justify-content: center; border-bottom: none;">
-                        <span class="panel-label" style="font-size: 1.2rem; color: #00ccaa;">MENSAJE ENVIADO</span>
-                    </div>
-                    <div class="panel-content">
-                        <p style="font-size: 1.2rem; margin-bottom: 20px;">Gracias por contactar. Recibirás una respuesta en
-                            breve.</p>
-                        <p style="font-family: monospace;">Ref: <?php echo strtoupper(uniqid()); ?></p>
-                        <a href="<?php echo BASE_URL; ?>" class="btn-primary"
-                            style="margin-top: 30px; display: inline-block;">VOLVER AL INICIO</a>
-                    </div>
+        <?php if ($message_sent): ?>
+            <div class="data-panel"
+                style="background: rgba(0, 204, 170, 0.1); border-color: #00ccaa; text-align: center; padding: 60px;">
+                <div class="panel-header" style="justify-content: center; border-bottom: none;">
+                    <span class="panel-label" style="font-size: 1.2rem; color: #00ccaa;">MENSAJE ENVIADO</span>
                 </div>
-            <?php else: ?>
-
-                <form action="" method="POST" class="contact-terminal">
-
-                    <?php if ($error_message): ?>
-                        <div
-                            style="background: rgba(255, 68, 0, 0.1); border: 1px solid var(--accent-color); color: var(--accent-color); padding: 15px; margin-bottom: 20px; font-family: monospace;">
-                            [!] <?php echo $error_message; ?>
-                        </div>
-                    <?php endif; ?>
-
-                    <div class="form-group">
-                        <label for="name">NOMBRE COMPLETO</label>
-                        <input type="text" id="name" name="name" required placeholder="Tu nombre...">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">CORREO ELECTRÓNICO</label>
-                        <input type="email" id="email" name="email" required placeholder="tu@email.com" value="<?php echo isset($_GET['email']) ? htmlspecialchars($_GET['email']) : ''; ?>">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">MENSAJE O PROYECTO</label>
-                        <textarea id="message" name="message" required rows="6"
-                            placeholder="Cuéntame sobre tu proyecto..."></textarea>
-                    </div>
-
-                    <!-- Recaptcha v3 Hidden Input -->
-                    <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+                <div class="panel-content">
+                    <p style="font-size: 1.2rem; margin-bottom: 20px;">Gracias por contactar. Recibirás una respuesta en
+                        breve.</p>
+                    <p style="font-family: monospace;">Ref: <?php echo strtoupper(uniqid()); ?></p>
+                    <a href="<?php echo BASE_URL; ?>" class="btn-primary"
+                        style="margin-top: 30px; display: inline-block;">VOLVER AL INICIO</a>
+                </div>
             </div>
+        <?php else: ?>
 
-            <button type="submit" class="submit-btn" style="width: 100%;">
-                <span class="btn-text">ENVIAR MENSAJE</span>
-                <div class="btn-glitch"></div>
-            </button>
+            <form action="" method="POST" class="contact-terminal">
 
-            <script>
-                document.querySelector('.contact-terminal').addEventListener('submit', function (e) {
-                    e.preventDefault();
-                    grecaptcha.ready(function () {
-                        grecaptcha.execute('<?php echo $site_key; ?>', { action: 'submit' }).then(function (token) {
-                            document.getElementById('g-recaptcha-response').value = token;
-                            document.querySelector('.contact-terminal').submit();
+                <?php if ($error_message): ?>
+                    <div
+                        style="background: rgba(255, 68, 0, 0.1); border: 1px solid var(--accent-color); color: var(--accent-color); padding: 15px; margin-bottom: 20px; font-family: monospace;">
+                        [!] <?php echo $error_message; ?>
+                    </div>
+                <?php endif; ?>
+
+                <div class="form-group">
+                    <label for="name">NOMBRE COMPLETO</label>
+                    <input type="text" id="name" name="name" required placeholder="Tu nombre...">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">CORREO ELECTRÓNICO</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@email.com"
+                        value="<?php echo isset($_GET['email']) ? htmlspecialchars($_GET['email']) : ''; ?>">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">MENSAJE O PROYECTO</label>
+                    <textarea id="message" name="message" required rows="6"
+                        placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                </div>
+
+                <!-- Recaptcha v3 Hidden Input -->
+                <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+
+                <button type="submit" class="submit-btn" style="width: 100%;">
+                    <span class="btn-text">ENVIAR MENSAJE</span>
+                    <div class="btn-glitch"></div>
+                </button>
+
+                <script>
+                    document.querySelector('.contact-terminal').addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        grecaptcha.ready(function () {
+                            grecaptcha.execute('<?php echo $site_key; ?>', { action: 'submit' }).then(function (token) {
+                                document.getElementById('g-recaptcha-response').value = token;
+                                document.querySelector('.contact-terminal').submit();
+                            });
                         });
                     });
-                });
-            </script>
+                </script>
 
             </form>
         <?php endif; ?>
@@ -168,11 +163,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
     <!-- Right Column: Direct Channels -->
-    <div class="contact-channels-col">
+    <div class="contact-channels-col" style="grid-column: 9 / -1;">
 
         <!-- Email Panel -->
         <a href="mailto:pablo@centraldecomunicacion.es" class="data-panel"
-            style="text-decoration: none; cursor: pointer; transition: all 0.3s;">
+            style="text-decoration: none; cursor: pointer; transition: all 0.3s; min-height: 180px;">
             <div class="panel-header">
                 <span class="panel-label">EMAIL DIRECTO</span>
                 <div class="light on"></div>
@@ -189,7 +184,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <!-- WhatsApp Panel -->
         <a href="https://wa.me/34657089081" target="_blank" class="data-panel"
-            style="text-decoration: none; cursor: pointer; transition: all 0.3s;">
+            style="text-decoration: none; cursor: pointer; transition: all 0.3s; min-height: 180px; margin-top: 20px;">
             <div class="panel-header">
                 <span class="panel-label">WHATSAPP PROFESIONAL</span>
                 <div class="light on"></div>
@@ -205,7 +200,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </a>
 
         <!-- Info Panel -->
-        <div class="data-panel" style="min-height: auto;">
+        <div class="data-panel" style="min-height: auto; margin-top: 20px;">
             <div class="panel-content" style="align-items: flex-start; text-align: left;">
                 <p style="font-size: 0.9rem; line-height: 1.6; opacity: 0.8;">
                     "La comunicación efectiva es el puente entre la confusión y la claridad."
@@ -214,64 +209,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
     </div>
-
-</div>
-
 </div>
 
 <style>
     /* 
      * ESTRUCTURA DE LAYOUT ROBUSTA
-     * Basada en test visual exitoso: Grid de 2 columnas + Contenedor de 1200px
+     * Ahora integrada en el grid de 12 columnas global
      */
-
-    .custom-contact-container {
-        display: block !important;
-        width: 100%;
-        max-width: 100%;
-        /* Permitir full width para el background si se quisiera */
-        margin: 0;
-        padding-top: 80px;
-        padding-bottom: 80px;
-        background: transparent;
-    }
-
-    .contact-grid {
-        display: grid !important;
-        grid-template-columns: 1.2fr 1fr !important;
-        /* Proporción áurea aproximada */
-        gap: 80px !important;
-        max-width: 1200px !important;
-        margin: 0 auto !important;
-        padding: 60px !important;
-
-        /* Visuals del contenedor "Terminal" */
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-        box-sizing: border-box;
-    }
-
-    .contact-header {
-        grid-column: 1 / -1 !important;
-        margin-bottom: 40px !important;
-    }
-
-    .contact-form-col {
-        grid-column: 1 / 2 !important;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        min-width: 0;
-    }
-
-    .contact-channels-col {
-        grid-column: 2 / 3 !important;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        min-width: 0;
-    }
 
     /* Terminal Form Styles */
     .contact-terminal .form-group {
@@ -316,8 +260,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     /* Submit Button Sci-Fi */
     .submit-btn {
-        background: var(--text-color);
-        color: var(--bg-color);
+        background: var(--accent-color);
+        color: #fff;
         border: none;
         padding: 20px 40px;
         font-family: 'IBM Plex Mono', monospace;
@@ -330,11 +274,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         width: 100%;
         transition: all 0.3s;
         text-transform: uppercase;
+        margin-top: 20px;
     }
 
     .submit-btn:hover {
-        background: var(--accent-color);
-        color: #fff;
+        background: var(--text-color);
+        color: var(--bg-color);
         transform: translateY(-2px);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
@@ -348,8 +293,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        min-height: 220px;
-        /* Restauramos altura consistente para los paneles */
     }
 
     .data-panel:hover {
@@ -364,18 +307,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
-        .contact-grid {
-            display: flex !important;
-            flex-direction: column;
-            padding: 20px !important;
-            gap: 40px !important;
-            width: 95% !important;
-        }
 
         .contact-form-col,
         .contact-channels-col {
-            width: 100%;
             grid-column: 1 / -1 !important;
+            margin-top: 20px !important;
         }
 
         .contact-header h1 {

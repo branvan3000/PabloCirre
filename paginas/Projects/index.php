@@ -11,16 +11,22 @@ include '../../Components/header.php';
 ?>
 
 <!-- Hero Section Projects -->
-<section class="hero-section" style="padding: 80px 0;">
-    <h1 class="hero-title" style="font-size: 4rem;">Portfolio &<br>Casos de Éxito.</h1>
-    <p class="hero-subtitle">
-        Proyectos de Big Data, SaaS y Videojuegos que han impactado a más de 12,000 clientes y procesado 1.4M de
-        registros empresariales.
-    </p>
+<section class="grid-row hero-section" style="padding: 80px 0;">
+    <div style="grid-column: 1 / -1;">
+        <h1 class="hero-title" style="font-size: 4rem;">Portfolio &<br>Casos de Éxito.</h1>
+        <p class="hero-subtitle">
+            Proyectos de Big Data, SaaS y Videojuegos que han impactado a más de 12,000 clientes y procesado 1.4M de
+            registros empresariales.
+        </p>
+    </div>
 </section>
 
 <!-- Projects Grid -->
-<h2 class="section-title">Proyectos Destacados</h2>
+<div class="grid-row">
+    <div style="grid-column: 1 / -1;">
+        <h2 class="section-title">Proyectos Destacados</h2>
+    </div>
+</div>
 
 <div class="projects-grid">
 
@@ -46,7 +52,7 @@ include '../../Components/header.php';
                 <span class="pm-value">15+</span>
             </div>
         </div>
-        <a href="<?php echo BASE_URL; ?>/paginas/OpenData/" class="project-link">Ver más →</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/Projects/CentralDeComunicacion/" class="project-link">Ver más →</a>
     </div>
 
     <!-- Project 2: KaijuVerifier -->
@@ -177,8 +183,8 @@ include '../../Components/header.php';
 <!-- Testimonials Section -->
 <h2 class="section-title" style="margin-top: 120px;">Lo Que Dicen los Clientes</h2>
 
-<div class="metrics-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 120px;">
-    <div class="data-panel" style="min-height: auto;">
+<div class="grid-row" style="margin-bottom: 120px;">
+    <div class="data-panel" style="grid-column: span 6; min-height: auto;">
         <div class="panel-header">
             <span class="panel-label">CLIENTE_A</span>
             <div class="light on"></div>
@@ -193,7 +199,7 @@ include '../../Components/header.php';
         </div>
     </div>
 
-    <div class="data-panel" style="min-height: auto;">
+    <div class="data-panel" style="grid-column: span 6; min-height: auto;">
         <div class="panel-header">
             <span class="panel-label">CLIENTE_B</span>
             <div class="light on"></div>

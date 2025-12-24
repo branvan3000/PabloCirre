@@ -118,22 +118,9 @@ require_once __DIR__ . '/config.php';
         </noscript>
 
         <!-- Inline Critical CSS -->
-        <style>
-            <?php
-            $css_files = [
-                __DIR__ . '/../assets/css/main.css',
-                __DIR__ . '/../assets/css/mobile-nav.css',
-                __DIR__ . '/../assets/css/cookie-banner.css'
-            ];
-
-            foreach ($css_files as $css_file) {
-                if (file_exists($css_file)) {
-                    echo file_get_contents($css_file);
-                }
-            }
-            ?>
-        </style>
-        <!-- Removed blocking links -->
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/main.css">
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/mobile-nav.css">
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/cookie-banner.css">
     <?php endif; ?>
 </head>
 

@@ -11,19 +11,17 @@ include 'Components/header.php';
 ?>
 
 <!-- Hero Section -->
-<!-- DEBUG: AM I LIVE? -->
-<section class="hero-section">
-    <div class="hero-panel panel-1"></div>
-    <div class="hero-panel panel-2"></div>
-
-    <h1 class="hero-title">Big Data, Email Intelligence,<br>Formación & Experiencias en Vídeo.</h1>
-    <p class="hero-subtitle">
-        Construyendo infraestructura digital escalable y experiencias narrativas inmersivas desde Granada,
-        España.
-    </p>
-    <div>
-        <a href="<?php echo BASE_URL; ?>/paginas/Projects/" class="btn-primary">Ver Proyectos</a>
-        <a href="<?php echo BASE_URL; ?>/paginas/About-Me/" class="link-secondary">Leer Biografía</a>
+<section class="grid-row hero-section">
+    <div style="grid-column: 1 / -1;">
+        <h1 class="hero-title">Big Data, Email Intelligence,<br>Formación & Experiencias en Vídeo.</h1>
+        <p class="hero-subtitle">
+            Construyendo infraestructura digital escalable y experiencias narrativas inmersivas desde Granada,
+            España.
+        </p>
+        <div>
+            <a href="<?php echo BASE_URL; ?>/paginas/Projects/" class="btn-primary">Ver Proyectos</a>
+            <a href="<?php echo BASE_URL; ?>/paginas/About-Me/" class="link-secondary">Leer Biografía</a>
+        </div>
     </div>
 </section>
 
@@ -83,7 +81,7 @@ include 'Components/header.php';
     </div>
 
     <!-- Panel 4: VERIFICACIÓN con Musical Knobs (MODIFICADO - Hidden Labels) -->
-    <div class="data-panel knob-panel">
+    <div class="data-panel knob-panel" style="grid-column: span 3;">
         <div class="panel-header">
             <span class="panel-label">VERIFICACIÓN</span>
             <div class="light on"></div>
@@ -118,7 +116,11 @@ include 'Components/header.php';
 </div>
 
 <!-- Projects Section -->
-<h2 class="section-title">Proyectos Destacados</h2>
+<div class="grid-row">
+    <div style="grid-column: 1 / -1;">
+        <h2 class="section-title">Proyectos Destacados</h2>
+    </div>
+</div>
 
 <div class="projects-grid">
 
@@ -184,9 +186,11 @@ include 'Components/header.php';
 </div>
 
 <!-- About Section -->
-<div class="about-section">
-    <h2 class="about-title">Una carrera definida por<br>la curiosidad y el código.</h2>
-    <div class="about-text">
+<div class="grid-row about-section">
+    <div style="grid-column: 1 / -1;">
+        <h2 class="about-title">Una carrera definida por<br>la curiosidad y el código.</h2>
+    </div>
+    <div class="about-text" style="grid-column: 1 / -1;">
         <p>
             Mi trayectoria profesional comenzó oficialmente en 1997, experimentando con las primeras versiones de
             realidad virtual y VRML, mucho antes de que el concepto de metaverso se convirtiera en una tendencia global.
@@ -231,11 +235,14 @@ include 'Components/header.php';
 </div>
 
 <!-- Contact Section -->
-<div class="contact-section">
-    <h2 style="font-size: 2rem; margin-bottom: 10px;">¿Listo para colaborar?</h2>
-    <p style="color: var(--text-secondary); margin-bottom: 30px;">Disponible para consultoría en arquitectura Big Data y
-        Diseño
-        de Videojuegos. Cuéntame tu proyecto.</p>
+<div class="grid-row contact-section">
+    <div style="grid-column: 1 / -1;">
+        <h2 style="font-size: 2rem; margin-bottom: 10px;">¿Listo para colaborar?</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 30px;">Disponible para consultoría en arquitectura Big
+            Data y
+            Diseño
+            de Videojuegos. Cuéntame tu proyecto.</p>
+    </div>
 
     <form class="contact-form" action="<?php echo BASE_URL; ?>/paginas/Contact/" method="get">
         <label for="contact-email" class="sr-only">Tu Email</label>

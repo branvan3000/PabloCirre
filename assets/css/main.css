@@ -131,38 +131,56 @@ body {
     z-index: -1;
 }
 
+:root {
+    --container-max: 1440px;
+    --container-pad: 40px;
+}
+
+@media (max-width: 900px) {
+    :root {
+        --container-pad: 20px;
+    }
+}
+
 .container {
-    max-width: 1440px;
+    max-width: var(--container-max);
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 var(--container-pad);
     display: block;
-    /* SAFE DEFAULT: CHANGED FROM GRID */
-}
-
-/* New Utility for 12-col layouts */
-.layout-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 20px;
-}
-
-#main-content {
-    display: contents;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .container-fluid {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 var(--container-pad);
     display: block;
-    /* SAFE DEFAULT */
+    box-sizing: border-box;
+    position: relative;
 }
 
-.container-fluid.layout-grid {
+/* Grid System for Rows where needed */
+.grid-row {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 20px;
+    gap: 30px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .grid-row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+#main-content {
+    display: block;
+    /* Restored from contents to ensure stability */
 }
 
 /* Typography */
@@ -343,7 +361,8 @@ h4 {
     gap: 20px;
     margin-bottom: 120px;
     background: var(--panel-bg);
-    padding: 40px 60px;
+    padding: 40px 0;
+    /* REMOVED 60PX HORIZONTAL PADDING */
     border: 2px solid var(--border-color);
     box-shadow:
         inset 0 0 20px rgba(0, 0, 0, 0.1),
@@ -484,12 +503,14 @@ h4 {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-bottom: 120px;
+    padding: 0;
+    /* ENSURE NO PADDING */
 }
 
 .project-card {
     background: var(--panel-bg);
     border: 1px solid var(--border-color);
-    padding: 40px 60px;
+    padding: 40px;
     transition: all 0.3s ease;
     position: relative;
     box-shadow:
@@ -625,7 +646,7 @@ h4 {
     margin-bottom: 20px;
 }
 
-/* Contact Section */
+/* Contact Section on Home */
 .contact-section {
     grid-column: 1 / -1;
     background: var(--panel-bg);
@@ -637,6 +658,16 @@ h4 {
     box-shadow:
         inset 2px 2px 5px rgba(255, 255, 255, 0.05),
         inset -2px -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Footer */
+.main-footer {
+    grid-column: 1 / -1;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
 }
 
 .contact-section::before {

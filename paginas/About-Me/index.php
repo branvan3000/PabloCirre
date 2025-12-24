@@ -11,18 +11,24 @@ include '../../Components/header.php';
 ?>
 
 <!-- Hero Section About -->
-<section class="hero-section" style="padding: 80px 0;">
-    <h1 class="hero-title" style="font-size: 4rem;">Pablo Cirre.<br>Developer & Teacher.</h1>
-    <p class="hero-subtitle">
-        +20 años creando soluciones digitales. De experimentos VR en 1997 a bases de datos con 1.4M registros. Desde
-        Granada para el mundo.
-    </p>
+<section class="grid-row hero-section" style="padding: 80px 0;">
+    <div style="grid-column: 1 / -1;">
+        <h1 class="hero-title" style="font-size: 4rem;">Pablo Cirre.<br>Developer & Teacher.</h1>
+        <p class="hero-subtitle">
+            +20 años creando soluciones digitales. De experimentos VR en 1997 a bases de datos con 1.4M registros. Desde
+            Granada para el mundo.
+        </p>
+    </div>
 </section>
 
 <!-- Timeline Docente -->
-<h2 class="section-title">Experiencia Docente</h2>
+<div class="grid-row">
+    <div style="grid-column: 1 / -1;">
+        <h2 class="section-title">Experiencia Docente</h2>
+    </div>
+</div>
 
-<div class="about-section" style="margin-bottom: 120px; gap: 40px;">
+<div class="grid-row about-section" style="margin-bottom: 120px;">
     <h3 style="grid-column: 1 / 5; font-size: 1.5rem; color: var(--accent-color);">1997 - 2025</h3>
     <div style="grid-column: 5 / -1;">
         <div style="border-left: 2px solid var(--border-color); padding-left: 30px; margin-left: 10px;">
@@ -827,10 +833,14 @@ include '../../Components/header.php';
 </div>
 
 <!-- Skills -->
-<h2 class="section-title">Stack Técnico & Habilidades</h2>
+<div class="grid-row">
+    <div style="grid-column: 1 / -1;">
+        <h2 class="section-title">Stack Técnico & Habilidades</h2>
+    </div>
+</div>
 
-<div class="metrics-grid" style="margin-bottom: 120px;">
-    <div class="data-panel" style="min-height: auto;">
+<div class="grid-row" style="margin-bottom: 120px;">
+    <div class="data-panel" style="grid-column: span 3; min-height: auto;">
         <div class="panel-header">
             <span class="panel-label">BIG_DATA</span>
             <div class="light on"></div>
@@ -840,7 +850,7 @@ include '../../Components/header.php';
             Arquitectura de datos</p>
     </div>
 
-    <div class="data-panel" style="min-height: auto;">
+    <div class="data-panel" style="grid-column: span 3; min-height: auto;">
         <div class="panel-header">
             <span class="panel-label">WEB_DEV</span>
             <div class="light on"></div>
@@ -850,7 +860,7 @@ include '../../Components/header.php';
             Node.js</p>
     </div>
 
-    <div class="data-panel" style="min-height: auto;">
+    <div class="data-panel" style="grid-column: span 3; min-height: auto;">
         <div class="panel-header">
             <span class="panel-label">GAME_DEV</span>
             <div class="light on"></div>
@@ -860,7 +870,7 @@ include '../../Components/header.php';
             Integration</p>
     </div>
 
-    <div class="data-panel" style="min-height: auto;">
+    <div class="data-panel" style="grid-column: span 3; min-height: auto;">
         <div class="panel-header">
             <span class="panel-label">MARKETING</span>
             <div class="light on"></div>
@@ -872,17 +882,22 @@ include '../../Components/header.php';
 </div>
 
 <!-- Contact Form -->
-<h2 class="section-title">Contacto</h2>
-
-<div class="contact-cta"
-    style="background: var(--panel-bg); padding: 40px; border-radius: 8px; border: 1px solid var(--border-color); text-align: center;">
-    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">¿Hablamos de tu proyecto?</h3>
-    <p style="color: var(--text-secondary); margin-bottom: 30px;">
-        Estoy disponible para consultoría técnica, desarrollo a medida y formación especializada.<br>
-        Respondo personalmente en menos de 24 horas.
-    </p>
-    <a href="<?php echo BASE_URL; ?>/paginas/Contact/" class="btn-primary"
-        style="display: inline-block; padding: 15px 40px; font-size: 1.1rem;">Ir a Contacto</a>
+<div class="grid-row">
+    <div style="grid-column: 1 / -1;">
+        <h2 class="section-title">Contacto</h2>
+    </div>
 </div>
 
-<?php include '../../Components/footer.php'; ?>
+<div class="grid-row">
+    <div class="contact-cta"
+        style="grid-column: 1 / -1; background: var(--panel-bg); padding: 40px; border-radius: 8px; border: 1px solid var(--border-color); text-align: center;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 15px;">¿Hablamos de tu proyecto??</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 30px;">
+            Estoy disponible para consultoría técnica, desarrollo a medida y formación especializada.<br>
+            Respondo personalmente en menos de 24 horas.
+        </p>
+        <a href="<?php echo BASE_URL; ?>/paginas/Contact/" class="btn-primary"
+            style="display: inline-block; padding: 15px 40px; font-size: 1.1rem;">Ir a Contacto</a>
+    </div>
+
+    <?php include '../../Components/footer.php'; ?>
