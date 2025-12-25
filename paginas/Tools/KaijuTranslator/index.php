@@ -1,13 +1,13 @@
 <?php
 /**
  * Tools - Kaiju Translator
- * Estilo: Splash Style
+ * Estilo: Splash Style - Extended Vision
  */
 
 // SEO Metadata
-$page_title = "Kaiju Translator · Motor de Localización PHP con AI | Pablo Cirre Tools";
-$page_description = "KaijuTranslator (KT) es un motor de localización automatizado para PHP que genera espejos SEO estáticos usando LLMs (OpenAI, DeepSeek, Gemini).";
-$page_keywords = "kaiju translator, traduccion ai, localizacion php, seo multilingue, ai translation engine";
+$page_title = "Kaiju Translator · Democratizando el Acceso Global a la Información | Pablo Cirre Tools";
+$page_description = "KaijuTranslator (KT) no es solo un motor de traducción; es una infraestructura para un mundo sin barreras lingüísticas. Genera espejos SEO estáticos para conectar culturas.";
+$page_keywords = "kaiju translator, impacto global, democratización información, traducción ai, infraestructura seo, pablo cirre vision";
 
 include '../../../Components/header.php';
 ?>
@@ -90,6 +90,19 @@ include '../../../Components/header.php';
         flex-shrink: 0;
     }
 
+    .vision-section {
+        margin-bottom: 120px;
+    }
+
+    .vision-quote {
+        font-size: 2.5rem;
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 40px;
+        letter-spacing: -1px;
+        color: var(--text-color);
+    }
+
     @media (max-width: 768px) {
         .project-nav-bar {
             top: auto;
@@ -97,6 +110,10 @@ include '../../../Components/header.php';
             left: 50%;
             transform: translateX(-50%);
             width: max-content;
+        }
+
+        .vision-quote {
+            font-size: 1.8rem;
         }
     }
 </style>
@@ -121,146 +138,146 @@ include '../../../Components/header.php';
 <!-- Hero Section -->
 <section class="hero-section" style="padding: 140px 0 80px;">
     <span class="highlight-tag"
-        style="background: var(--accent-color); color: white; padding: 5px 12px; border-radius: 4px; font-size: 0.9rem; margin-bottom: 25px; display: inline-block; letter-spacing: 1px;">ENGINEERING-FIRST
-        LOCALIZATION</span>
+        style="background: var(--accent-color); color: white; padding: 5px 12px; border-radius: 4px; font-size: 0.9rem; margin-bottom: 25px; display: inline-block; letter-spacing: 1px;">EL
+        MANIFIESTO DEL ESPEJO GLOBAL</span>
     <h1 class="hero-title" style="font-size: 4rem; margin-bottom: 30px; letter-spacing: -2px; line-height: 1.1;">
-        Kaiju Translator:<br>El Espejo SEO para PHP</h1>
+        Kaiju Translator:<br>Conectando el Conocimiento Humano</h1>
     <p class="hero-subtitle"
         style="font-size: 1.3rem; max-width: 900px; color: var(--text-color); opacity: 0.8; line-height: 1.6;">
-        Internacionalización automática sin redirecciones ni deuda técnica. <strong>KaijuTranslator</strong> genera
-        capas físicas de contenido traducido por AI, listas para ser indexadas por Google en minutos.
+        En un planeta fragmentado por el lenguaje, el acceso a la información es el derecho humano más crítico de la era
+        digital. <strong>KaijuTranslator</strong> no es solo una herramienta; es una declaración de intenciones
+        tecnológica para democratizar el éxito global.
     </p>
     <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 30px;">
-        <span class="tech-tag">PHP LAYER</span>
-        <span class="tech-tag">ZERO-REWRITE</span>
-        <span class="tech-tag">AI-DRIVEN</span>
-        <span class="tech-tag">PHYSICAL MIRRORS</span>
+        <span class="tech-tag">GLOBAL IMPACT</span>
+        <span class="tech-tag">ECO-EFFICIENCY</span>
+        <span class="tech-tag">DEMOCRATIZATION</span>
+        <span class="tech-tag">ZERO-FRICTION</span>
     </div>
 </section>
 
-<!-- Metrics Grid -->
-<div class="metrics-grid" style="margin-bottom: 80px;">
-    <div class="data-panel">
-        <div class="panel-header"><span class="panel-label">CRAWLABILITY</span>
-            <div class="light on"></div>
-        </div>
-        <div class="panel-content">
-            <div class="metric-value">100%</div>
-            <div class="metric-desc">Server-Rendered</div>
-        </div>
-    </div>
-    <div class="data-panel">
-        <div class="panel-header"><span class="panel-label">SETUP TIME</span>
-            <div class="light on"></div>
-        </div>
-        <div class="panel-content">
-            <div class="metric-value">&lt; 5m</div>
-            <div class="metric-desc">Plug & Play Integration</div>
-        </div>
-    </div>
-    <div class="data-panel">
-        <div class="panel-header"><span class="panel-label">AI MODELS</span>
-            <div class="light on"></div>
-        </div>
-        <div class="panel-content">
-            <div class="metric-value">Multi</div>
-            <div class="metric-desc">OpenAI / DeepSeek / Gemini</div>
-        </div>
-    </div>
-    <div class="data-panel">
-        <div class="panel-header"><span class="panel-label">CACHE</span>
-            <div class="light on"></div>
-        </div>
-        <div class="panel-content">
-            <div class="metric-value">File</div>
-            <div class="metric-desc">High-Performance Storage</div>
-        </div>
-    </div>
-</div>
-
-<!-- Main Content Flow -->
+<!-- Vision Content Flow -->
 <div style="grid-column: 2 / 12; margin-bottom: 100px;">
 
-    <!-- Timeline / Features -->
-    <div style="max-width: 900px; margin: 0 auto; border-left: 3px solid var(--border-color); padding-left: 50px;">
-
-        <!-- Feature 1: Architecture -->
-        <div style="margin-bottom: 80px; position: relative;">
-            <div
-                style="position: absolute; left: -63px; top: 0; width: 24px; height: 24px; background: var(--bg-color); border: 4px solid var(--accent-color); border-radius: 50%;">
+    <!-- Vision 1: The Linguistic Barrier -->
+    <div class="vision-section">
+        <h2 class="vision-quote">"El 60% de Internet está en inglés, pero solo el 15% del mundo lo habla. Estamos
+            dejando atrás a miles de millones."</h2>
+        <div style="max-width: 900px; border-left: 3px solid var(--accent-color); padding-left: 50px;">
+            <div style="font-size: 1.25rem; line-height: 1.8; color: var(--text-color); opacity: 0.85;">
+                <p>La barrera del lenguaje es la nueva brecha digital. Cuando una innovación, un tutorial médico o una
+                    documentación técnica se publica solo en un idioma, se está levantando un muro invisible frente a
+                    mentes brillantes en mercados emergentes.</p>
+                <p style="margin-top: 20px;">KaijuTranslator nace para derribar ese muro. Al crear espejos físicos y
+                    automáticos de información, permitimos que el conocimiento fluya de forma nativa hacia el español,
+                    hindi, árabe o chino, permitiendo que la próxima generación de creadores no tenga que aprender un
+                    idioma extranjero antes de poder aprender a construir.</p>
             </div>
-            <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: var(--text-color);">Arquitectura de "Espejo
-                Físico"</h2>
-            <div style="font-size: 1.15rem; line-height: 1.8; color: var(--text-color); opacity: 0.85;">
-                <p>Nuestra filosofía es el <strong>"Zero-Rewrite"</strong>. En lugar de complicar tu base de datos o
-                    lógica de rutas, Kaiju actúa como una capa de pre-procesamiento que construye una réplica física de
-                    tu sitio en subdirectorios nativos (ej. <code>/en/</code>, <code>/ja/</code>).</p>
+        </div>
+    </div>
 
-                <div class="diagram-container">
-                    <div class="diagram-step">
-                        <div class="step-num">1</div>
-                        <div><strong>KT Scanner:</strong> Detecta cambios en tus archivos PHP originales.</div>
-                    </div>
-                    <div class="diagram-step">
-                        <div class="step-num">2</div>
-                        <div><strong>Stub Generator:</strong> Crea ficheros "espejo" ligeros en los subdirectorios.
-                        </div>
-                    </div>
-                    <div class="diagram-step">
-                        <div class="step-num">3</div>
-                        <div><strong>AI Brain:</strong> Traduce el contenido en caliente usando modelos de última
-                            generación.</div>
-                    </div>
-                    <div class="diagram-step">
-                        <div class="step-num">4</div>
-                        <div><strong>SEO Injector:</strong> Añade hreflangs, sitemaps y canonicals automáticamente.
-                        </div>
-                    </div>
+    <!-- Vision 2: Democratizing Success -->
+    <div class="vision-section">
+        <h2 class="vision-quote">Democratizando el Éxito para el Pequeño Creador</h2>
+        <div style="max-width: 900px; border-left: 3px solid var(--border-color); padding-left: 50px;">
+            <div style="font-size: 1.25rem; line-height: 1.8; color: var(--text-color); opacity: 0.85;">
+                <p>Tradicionalmente, internacionalizar un proyecto requería equipos de traducción masivos o APIs de
+                    "on-the-fly" prohibitivamente caras que penalizaban el SEO. Esto dejaba la expansión global
+                    reservada solo para las grandes corporaciones.</p>
+                <p style="margin-top: 20px;">Con la arquitectura de <strong>Espejo SEO</strong> de Kaiju, cualquier
+                    desarrollador independiente puede posicionar sus ideas en 20 países simultáneamente. Estamos
+                    nivelando el campo de juego. Una buena idea en Bogota ahora tiene la misma visibilidad técnica que
+                    una en Silicon Valley.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technical Vision: Zero-Rewrite & Sustainability -->
+    <div class="vision-section"
+        style="background: var(--panel-bg); border: 1px solid var(--border-color); padding: 60px; border-radius: 12px;">
+        <h2 style="font-size: 2.2rem; margin-bottom: 30px;">Ingeniería Sostenible y Consciente</h2>
+        <div style="font-size: 1.15rem; line-height: 1.8; color: var(--text-color); opacity: 0.85;">
+            <p>Cada llamada a un LLM (como OpenAI o Gemini) consume recursos energéticos considerables. En un mundo
+                consciente del clima, el uso indiscriminado de la AI es irresponsable.</p>
+            <p style="margin-top: 15px;">KaijuTranslator implementa una <strong>Estrategia de Caché de un Solo
+                    Paso</strong>. Traducimos una vez, servimos un millón de veces. Al generar archivos físicos locales,
+                eliminamos la necesidad de redundancia computacional. Es eficiencia pura: maximizamos el valor
+                informativo mientras minimizamos la huella de carbono digital.</p>
+
+            <div class="diagram-container" style="background: rgba(0,0,0,0.1); margin-top: 40px;">
+                <div class="diagram-step">
+                    <div class="step-num">1</div>
+                    <div><strong>Deep Scan:</strong> Entendemos el contexto semántico de tu web original.</div>
+                </div>
+                <div class="diagram-step">
+                    <div class="step-num">2</div>
+                    <div><strong>Neural Link:</strong> Conectamos con el modelo de AI más eficiente para el par de
+                        idiomas.</div>
+                </div>
+                <div class="diagram-step">
+                    <div class="step-num">3</div>
+                    <div><strong>Physical Generation:</strong> Creamos la capa nativa indexable.</div>
+                </div>
+                <div class="diagram-step">
+                    <div class="step-num">4</div>
+                    <div><strong>Eternal Serve:</strong> Entregamos HTML estático sin latencia ni nuevos consumos.</div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Feature 2: SEO -->
-        <div style="margin-bottom: 80px; position: relative;">
-            <div
-                style="position: absolute; left: -59px; top: 0; width: 16px; height: 16px; background: var(--bg-color); border: 3px solid var(--text-color); border-radius: 50%;">
+    <!-- Metrics Grid (The Reality of Impact) -->
+    <div class="metrics-grid" style="margin: 80px 0;">
+        <div class="data-panel">
+            <div class="panel-header"><span class="panel-label">POTENTIAL REACH</span>
+                <div class="light on"></div>
             </div>
-            <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: var(--text-color);">Ingeniería para el Crecimiento
-            </h2>
-            <div style="font-size: 1.15rem; line-height: 1.8; color: var(--text-color); opacity: 0.85;">
-                <p>Kaiju se encarga de toda la "deuda técnica" del SEO internacional:</p>
-                <ul style="margin-top: 15px;">
-                    <li><strong>Smart Hreflang:</strong> Inyección automática de etiquetas de alternancia.</li>
-                    <li><strong>Sitemap Indexing:</strong> Generación de sitemaps XML por idioma y sitemap_index
-                        general.</li>
-                    <li><strong>Logic Canonical:</strong> Gestión inteligente de canonicals para evitar contenido
-                        duplicado.</li>
-                </ul>
+            <div class="panel-content">
+                <div class="metric-value">4.5B</div>
+                <div class="metric-desc">Usuarios no Angloparlantes</div>
             </div>
         </div>
-
-        <!-- Feature 3: Performance -->
-        <div style="margin-bottom: 60px; position: relative;">
-            <div
-                style="position: absolute; left: -59px; top: 0; width: 16px; height: 16px; background: var(--bg-color); border: 3px solid #ccc; border-radius: 50%;">
+        <div class="data-panel">
+            <div class="panel-header"><span class="panel-label">SEO EFFICIENCY</span>
+                <div class="light on"></div>
             </div>
-            <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: var(--text-color);">Rendimiento y Seguridad</h2>
-            <div style="font-size: 1.15rem; line-height: 1.8; color: var(--text-color); opacity: 0.85;">
-                <p>Utiliza una caché de archivos local agresiva. Una vez que una página se traduce, se sirve
-                    instantáneamente como HTML estático, eliminando la latencia de la AI en visitas subsiguientes.</p>
+            <div class="panel-content">
+                <div class="metric-value">0ms</div>
+                <div class="metric-desc">Latencia de Traducción (Static)</div>
+            </div>
+        </div>
+        <div class="data-panel">
+            <div class="panel-header"><span class="panel-label">INTEGRATION COST</span>
+                <div class="light on"></div>
+            </div>
+            <div class="panel-content">
+                <div class="metric-value">$0</div>
+                <div class="metric-desc">Open Source for Global Good</div>
+            </div>
+        </div>
+        <div class="data-panel">
+            <div class="panel-header"><span class="panel-label">FUTURE READINESS</span>
+                <div class="light on"></div>
+            </div>
+            <div class="panel-content">
+                <div class="metric-value">200+</div>
+                <div class="metric-desc">Idiomas Soportados</div>
             </div>
         </div>
     </div>
 
-</div>
-
-<!-- CTA Final -->
-<div class="contact-section">
-    <h2 style="font-size: 3rem; margin-bottom: 25px;">Internacionaliza tu PHP ahora</h2>
-    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-        <a href="https://github.com/branvan3000/KaijuTranslator" target="_blank" class="btn-primary"
-            style="padding: 20px 50px; font-size: 1.2rem;">Ver en GitHub -></a>
+    <!-- Final Call to Action -->
+    <div class="vision-section" style="text-align: center;">
+        <h2 style="font-size: 3rem; margin-bottom: 20px;">Únete a la Revolución de la Información Libre</h2>
+        <p style="font-size: 1.4rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 40px;">
+            KaijuTranslator es mi contribución personal a un ecosistema digital más justo, conectado y eficiente. Porque
+            el lenguaje nunca debería ser el límite de tu talento.</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="https://github.com/branvan3000/KaijuTranslator" target="_blank" class="btn-primary"
+                style="padding: 20px 50px; font-size: 1.2rem;">Construyamos el Futuro Juntos -></a>
+        </div>
     </div>
+
 </div>
 
 <?php include '../../../Components/footer.php'; ?>
