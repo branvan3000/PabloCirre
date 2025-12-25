@@ -361,8 +361,7 @@ h4 {
     gap: 20px;
     margin-bottom: 120px;
     background: var(--panel-bg);
-    padding: 40px 0;
-    /* REMOVED 60PX HORIZONTAL PADDING */
+    padding: 40px var(--container-pad);
     border: 2px solid var(--border-color);
     box-shadow:
         inset 0 0 20px rgba(0, 0, 0, 0.1),
