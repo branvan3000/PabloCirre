@@ -1,240 +1,169 @@
 ﻿<?php
 /**
- * Central Enterprises - Unified API (BETA)
+ * Central Enterprises - Open Data Infrastructure
  */
 
-$page_title = "Central Enterprises | Unified API Beta - Pablo Cirre";
-$page_description = "central.enterprises - Unified Enterprise API for accessing all business databases from a single endpoint. GraphQL and REST API in development.";
-$page_keywords = "central enterprises, unified api, business data api, graphql api, enterprise data";
+$page_title = "Central Enterprises | Open Data Foundation - Pablo Cirre";
+$page_description = "Central.Enterprises: The common foundation for open data and corporate intelligence. Transform public signals into neutral business insights.";
+$page_keywords = "central enterprises, open data foundation, business intelligence, spain registry, uk companies house, us corporate data";
 
 include '../../../Components/header.php';
 ?>
 
 <!-- Hero Section -->
 <section class="hero-section" style="padding: 80px 0;">
-    <h1 class="hero-title" style="font-size: 4rem;">Central Enterprises<br>Unified API <span
-            style="background: linear-gradient(135deg, #9945ff, #6b3fa0); color: #fff; padding: 5px 15px; font-size: 1.5rem; border-radius: 8px; vertical-align: middle;">BETA</span>
-    </h1>
+    <h1 class="hero-title" style="font-size: 3.5rem; text-transform: uppercase; letter-spacing: -1px;">Open Data <br>Is
+        Infrastructure.</h1>
     <p class="hero-subtitle">
-        API unificada para acceder a todas las bases de datos empresariales desde un solo endpoint. GraphQL y REST API
-        en desarrollo.
+        Central.Enterprises proporciona una base común donde investigadores, pequeñas empresas e instituciones operan
+        desde una realidad compartida.
+        Transformamos señales públicas en una capa neutral de inteligencia empresarial global.
     </p>
     <div>
-        <a href="<?php echo BASE_URL; ?>/paginas/About-Me/" class="btn-primary">Solicitar Early Access</a>
+        <a href="http://central.enterprises/" target="_blank" class="btn-primary">Acceder a la Plataforma</a>
         <a href="<?php echo BASE_URL; ?>/paginas/OpenData/" class="link-secondary">Volver a OpenData</a>
     </div>
 </section>
 
-<!-- Metrics Console -->
+<!-- Metrics Console (System Status) -->
 <div class="metrics-grid" style="margin-bottom: 120px;">
     <div class="data-panel">
         <div class="panel-header">
-            <span class="panel-label">API_TYPE</span>
-            <div class="light" style="background: #9945ff; box-shadow: 0 0 10px #9945ff;"></div>
+            <span class="panel-label">GOVERNANCE</span>
+            <div class="light on"></div>
         </div>
         <div class="panel-content">
-            <div class="metric-value">Unified</div>
-            <div class="metric-desc">Single Endpoint</div>
+            <div class="metric-value">Foundation</div>
+            <div class="metric-desc">Spain-based</div>
         </div>
         <div class="panel-footer">
-            <span>REST: YES</span>
-            <span>GQL: YES</span>
+            <span>TRANSITION: ACTIVE</span>
         </div>
     </div>
 
     <div class="data-panel">
         <div class="panel-header">
-            <span class="panel-label">SOURCES</span>
-            <div class="light" style="background: #9945ff; box-shadow: 0 0 10px #9945ff;"></div>
+            <span class="panel-label">JURISDICTIONS</span>
+            <div class="light on"></div>
         </div>
         <div class="panel-content">
             <div class="metric-value">3</div>
-            <div class="metric-desc">Data Sources</div>
+            <div class="metric-desc">Key Regions</div>
         </div>
         <div class="panel-footer">
-            <span>ES + EU + UK</span>
+            <span>ES + US + UK</span>
         </div>
     </div>
 
     <div class="data-panel">
         <div class="panel-header">
-            <span class="panel-label">AUTH</span>
-            <div class="light" style="background: #9945ff; box-shadow: 0 0 10px #9945ff;"></div>
+            <span class="panel-label">API GATEWAY</span>
+            <div class="light on"></div>
         </div>
         <div class="panel-content">
-            <div class="metric-value">OAuth</div>
-            <div class="metric-desc">2.0 Protocol</div>
+            <div class="metric-value">12ms</div>
+            <div class="metric-desc">Global Latency</div>
         </div>
         <div class="panel-footer">
-            <span>SECURE: YES</span>
-            <span>JWT: OK</span>
+            <span>STATUS: OPERATIONAL</span>
         </div>
     </div>
 
     <div class="data-panel">
         <div class="panel-header">
-            <span class="panel-label">STATUS</span>
-            <div class="light" style="background: #9945ff; box-shadow: 0 0 10px #9945ff;"></div>
+            <span class="panel-label">ACCESS</span>
+            <div class="light on"></div>
         </div>
         <div class="panel-content">
-            <div class="metric-value">Dev</div>
-            <div class="metric-desc">In Development</div>
+            <div class="metric-value">CC0</div>
+            <div class="metric-desc">Open License</div>
         </div>
         <div class="panel-footer">
-            <span>PHASE: 2</span>
-            <span>ETA: Q2 2025</span>
+            <span>TIER: PUBLIC</span>
         </div>
     </div>
 </div>
 
-<!-- About Section -->
-<div class="about-section" style="margin-bottom: 120px;">
-    <h2 class="about-title">Un endpoint.<br>Toda la data.</h2>
-    <div class="about-text">
-        <p>
-            <strong>Central Enterprises</strong> unifica el acceso a centraldecomunicacion.es, companiesdata.cloud y
-            ukbusinessdatabases.club en una única API moderna.
-        </p>
-        <p>
-            Consulta millones de empresas con una sola integración. GraphQL para queries flexibles, REST para
-            compatibilidad total.
-        </p>
-        <p>
-            <strong>Tecnologías:</strong> REST API, GraphQL, OAuth 2.0, JWT, Webhooks, JSON/CSV export.
-        </p>
-    </div>
-</div>
-
-<!-- Features Preview -->
-<h2 class="section-title">Características Planificadas</h2>
+<!-- Access Protocols (Jurisdictions) -->
+<h2 class="section-title">Jurisdicciones Disponibles</h2>
 
 <div class="projects-grid" style="margin-bottom: 120px;">
 
-    <div class="project-card">
-        <span class="project-tag" style="background: #9945ff;">COMING SOON</span>
-        <h3 class="project-title">Unified REST API</h3>
+    <!-- Spain -->
+    <a href="http://central.enterprises/country/es" target="_blank" class="project-card"
+        style="text-decoration: none; color: inherit; transition: transform 0.2s;">
+        <span class="project-tag" style="background: var(--accent-color);">EU-01</span>
+        <h3 class="project-title">Spain Registry</h3>
         <p class="project-desc">
-            Un solo endpoint REST para consultar empresas de cualquier país o fuente de datos.
+            Acceso a datos corporativos uniformes para el Reino de España.
         </p>
         <div class="project-metrics">
             <div class="p-metric">
-                <span class="pm-label">Endpoint</span>
-                <span class="pm-value">1</span>
+                <span class="pm-label">Cobertura</span>
+                <span class="pm-value">100%</span>
             </div>
             <div class="p-metric">
-                <span class="pm-label">Sources</span>
-                <span class="pm-value">3</span>
+                <span class="pm-label">Update</span>
+                <span class="pm-value">Daily</span>
             </div>
         </div>
-    </div>
+    </a>
 
-    <div class="project-card">
-        <span class="project-tag" style="background: #9945ff;">COMING SOON</span>
-        <h3 class="project-title">GraphQL Support</h3>
+    <!-- USA -->
+    <a href="http://central.enterprises/country/us" target="_blank" class="project-card"
+        style="text-decoration: none; color: inherit; transition: transform 0.2s;">
+        <span class="project-tag" style="background: var(--text-secondary);">NA-01</span>
+        <h3 class="project-title">United States</h3>
         <p class="project-desc">
-            Consultas flexibles con GraphQL. Obtén exactamente los campos que necesitas.
+            Reconciliación de entidades corporativas a nivel federal y estatal.
         </p>
         <div class="project-metrics">
             <div class="p-metric">
-                <span class="pm-label">Type</span>
-                <span class="pm-value">GraphQL</span>
+                <span class="pm-label">States</span>
+                <span class="pm-value">50+</span>
             </div>
-            <div class="p-metric">
-                <span class="pm-label">Flexible</span>
-                <span class="pm-value">Yes</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card">
-        <span class="project-tag" style="background: #9945ff;">COMING SOON</span>
-        <h3 class="project-title">Real-time Sync</h3>
-        <p class="project-desc">
-            Sincronización en tiempo real entre todas las fuentes de datos.
-        </p>
-        <div class="project-metrics">
             <div class="p-metric">
                 <span class="pm-label">Sync</span>
                 <span class="pm-value">Real-time</span>
             </div>
+        </div>
+    </a>
+
+    <!-- UK -->
+    <a href="http://central.enterprises/country/gb" target="_blank" class="project-card"
+        style="text-decoration: none; color: inherit; transition: transform 0.2s;">
+        <span class="project-tag" style="background: var(--text-secondary);">EU-02</span>
+        <h3 class="project-title">United Kingdom</h3>
+        <p class="project-desc">
+            Integración y verificación de datos de Companies House.
+        </p>
+        <div class="project-metrics">
             <div class="p-metric">
-                <span class="pm-label">Webhooks</span>
-                <span class="pm-value">Yes</span>
+                <span class="pm-label">Source</span>
+                <span class="pm-value">Official</span>
+            </div>
+            <div class="p-metric">
+                <span class="pm-label">Format</span>
+                <span class="pm-value">JSON-LD</span>
             </div>
         </div>
-    </div>
+    </a>
 
 </div>
 
-<!-- Roadmap as data panels -->
-<h2 class="section-title">Roadmap</h2>
-
-<div class="metrics-grid" style="grid-template-columns: repeat(4, 1fr); margin-bottom: 120px;">
-    <div class="data-panel" style="border-color: var(--indicator-color);">
-        <div class="panel-header">
-            <span class="panel-label">FASE_1</span>
-            <div class="light on"></div>
-        </div>
-        <div class="panel-content">
-            <div class="metric-value" style="font-size: 1.5rem;">✓</div>
-            <div class="metric-desc">Arquitectura</div>
-        </div>
-        <div class="panel-footer">
-            <span>STATUS: DONE</span>
-        </div>
-    </div>
-
-    <div class="data-panel" style="border-color: #9945ff; border-width: 2px;">
-        <div class="panel-header">
-            <span class="panel-label">FASE_2</span>
-            <div class="light" style="background: #9945ff; box-shadow: 0 0 10px #9945ff;"></div>
-        </div>
-        <div class="panel-content">
-            <div class="metric-value" style="font-size: 1.5rem;">→</div>
-            <div class="metric-desc">Core API</div>
-        </div>
-        <div class="panel-footer">
-            <span>STATUS: IN PROGRESS</span>
-        </div>
-    </div>
-
-    <div class="data-panel">
-        <div class="panel-header">
-            <span class="panel-label">FASE_3</span>
-            <div class="light"></div>
-        </div>
-        <div class="panel-content">
-            <div class="metric-value" style="font-size: 1.5rem;">3</div>
-            <div class="metric-desc">GraphQL</div>
-        </div>
-        <div class="panel-footer">
-            <span>ETA: Q1 2025</span>
-        </div>
-    </div>
-
-    <div class="data-panel">
-        <div class="panel-header">
-            <span class="panel-label">FASE_4</span>
-            <div class="light"></div>
-        </div>
-        <div class="panel-content">
-            <div class="metric-value" style="font-size: 1.5rem;">4</div>
-            <div class="metric-desc">Public Beta</div>
-        </div>
-        <div class="panel-footer">
-            <span>ETA: Q2 2025</span>
-        </div>
-    </div>
-</div>
-
-<!-- CTA Section -->
-<div class="contact-section">
-    <h2 style="font-size: 2rem; margin-bottom: 10px;">Únete a la Waitlist</h2>
-    <p style="color: var(--text-secondary); margin-bottom: 30px;">Sé el primero en acceder cuando lancemos la beta
-        pública.</p>
-
-    <div style="max-width: 500px; margin: 0 auto;">
-        <a href="<?php echo BASE_URL; ?>/paginas/About-Me/" class="btn-primary">Contactar para Early Access</a>
+<!-- About / Manifesto -->
+<div class="about-section" style="margin-bottom: 120px;">
+    <h2 class="about-title">Why a Foundation?</h2>
+    <div class="about-text">
+        <p>
+            <strong>Central.Enterprises</strong> está en transición para convertirse en una Fundación con base en
+            España.
+            Creemos que los datos abiertos deben permanecer abiertos (CC0).
+        </p>
+        <p>
+            El acceso "Pro" financia la custodia y el mantenimiento de la infraestructura, garantizando que la capa base
+            permanezca neutral y accesible para la investigación y el desarrollo público.
+        </p>
     </div>
 </div>
 

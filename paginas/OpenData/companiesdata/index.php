@@ -31,12 +31,12 @@ include '../../../Components/header.php';
             <div class="light on"></div>
         </div>
         <div class="panel-content">
-            <div class="metric-value counter" data-target="7072734">0</div>
+            <div class="metric-value counter" data-target="8082827">0</div>
             <div class="metric-desc">Empresas Totales</div>
         </div>
         <div class="panel-footer">
             <span>TYPE: B2B</span>
-            <span>UPD: WEEKLY</span>
+            <span>UPD: DAILY</span>
         </div>
     </div>
 
@@ -46,7 +46,7 @@ include '../../../Components/header.php';
             <div class="light on"></div>
         </div>
         <div class="panel-content">
-            <div class="metric-value counter" data-target="5001427">0</div>
+            <div class="metric-value counter" data-target="5484980">0</div>
             <div class="metric-desc">Emails Verificados</div>
         </div>
         <div class="panel-footer">
@@ -61,7 +61,7 @@ include '../../../Components/header.php';
             <div class="light on"></div>
         </div>
         <div class="panel-content">
-            <div class="metric-value counter" data-target="27">0</div>
+            <div class="metric-value counter" data-target="25">0</div>
             <div class="metric-desc">Países Cubiertos</div>
         </div>
         <div class="panel-footer">
@@ -263,25 +263,37 @@ include '../../../Components/header.php';
     </div>
 
     <!-- Sweden -->
-    <div class="project-card" style="opacity: 0.6;">
-        <span class="project-tag" style="background: #777;">EN EXTRACCIÓN</span>
+    <a href="https://companiesdata.cloud/sweden-companies-database-excel-download" target="_blank" class="project-card"
+        style="text-decoration: none; color: inherit;">
         <h3 class="project-title">🇸🇪 Sweden</h3>
-        <p class="project-desc">Procesando registros mercantiles...<br>Estimación: High Quality Data</p>
-    </div>
+        <p class="project-desc">Variants: Premium & OpenData · CSV & Excel · Sector workbooks</p>
+        <div class="project-metrics">
+            <div class="p-metric"><span class="pm-label">Companies</span><span class="pm-value">475,000</span></div>
+            <div class="p-metric"><span class="pm-label">Emails</span><span class="pm-value">171,669</span></div>
+        </div>
+    </a>
 
     <!-- Switzerland -->
-    <div class="project-card" style="opacity: 0.6;">
-        <span class="project-tag" style="background: #777;">EN EXTRACCIÓN</span>
+    <a href="https://companiesdata.cloud/switzerland-companies-database-excel-download" target="_blank"
+        class="project-card" style="text-decoration: none; color: inherit;">
         <h3 class="project-title">🇨🇭 Switzerland</h3>
-        <p class="project-desc">Procesando registros mercantiles...<br>Estimación: High Quality Data</p>
-    </div>
+        <p class="project-desc">Variants: Premium & OpenData · CSV & Excel · Sector workbooks</p>
+        <div class="project-metrics">
+            <div class="p-metric"><span class="pm-label">Companies</span><span class="pm-value">132,000</span></div>
+            <div class="p-metric"><span class="pm-label">Emails</span><span class="pm-value">104,602</span></div>
+        </div>
+    </a>
 
     <!-- Denmark -->
-    <div class="project-card" style="opacity: 0.6;">
-        <span class="project-tag" style="background: #777;">EN EXTRACCIÓN</span>
+    <a href="https://companiesdata.cloud/denmark-companies-database-excel-download" target="_blank" class="project-card"
+        style="text-decoration: none; color: inherit;">
         <h3 class="project-title">🇩🇰 Denmark</h3>
-        <p class="project-desc">Procesando registros mercantiles...<br>Estimación: High Quality Data</p>
-    </div>
+        <p class="project-desc">Variants: Premium & OpenData · CSV & Excel · Sector workbooks</p>
+        <div class="project-metrics">
+            <div class="p-metric"><span class="pm-label">Companies</span><span class="pm-value">132,000</span></div>
+            <div class="p-metric"><span class="pm-label">Emails</span><span class="pm-value">73,503</span></div>
+        </div>
+    </a>
 
     <!-- Finland -->
     <div class="project-card" style="opacity: 0.6;">
@@ -305,18 +317,39 @@ include '../../../Components/header.php';
     </div>
 
     <!-- Slovakia -->
-    <div class="project-card" style="opacity: 0.6;">
-        <span class="project-tag" style="background: #777;">EN EXTRACCIÓN</span>
+    <a href="https://companiesdata.cloud/slovakia-companies-database-excel-download" target="_blank"
+        class="project-card" style="text-decoration: none; color: inherit;">
         <h3 class="project-title">🇸🇰 Slovakia</h3>
-        <p class="project-desc">Procesando registros mercantiles...<br>Estimación: High Quality Data</p>
-    </div>
+        <p class="project-desc">Variants: Premium & OpenData · CSV & Excel · Sector workbooks</p>
+        <div class="project-metrics">
+            <div class="p-metric"><span class="pm-label">Companies</span><span class="pm-value">36,500</span> <a
+                    href="https://companiesdata.cloud/macedonia-companies-database-excel-download" target="_blank"
+                    class="project-card" style="text-decoration: none; color: inherit;">
+                    <h3 class="project-title">🇲🇰 Macedonia</h3>
+                    <p class="project-desc">Variants: Premium & OpenData · CSV & Excel · Sector workbooks</p>
+                    <div class="project-metrics">
+                        <div class="p-metric"><span class="pm-label">Companies</span><span
+                                class="pm-value">47,000</span></div>
+                        <div class="p-metric"><span class="pm-label">Emails</span><span class="pm-value">20,251</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="p-metric"><span class="pm-label">Emails</span><span class="pm-value">23,008</span></div>
+        </div>
+    </a>
 
     <!-- Lithuania -->
-    <div class="project-card" style="opacity: 0.6;">
-        <span class="project-tag" style="background: #777;">EN EXTRACCIÓN</span>
+    <a href="https://companiesdata.cloud/lituania-companies-database-excel-download" target="_blank"
+        class="project-card" style="text-decoration: none; color: inherit;">
         <h3 class="project-title">🇱🇹 Lithuania</h3>
-        <p class="project-desc">Procesando registros mercantiles...<br>Estimación: High Quality Data</p>
-    </div>
+        <p class="project-desc">Variants: Premium & OpenData · CSV & Excel · Sector workbooks</p>
+        <div class="project-metrics">
+            <div class="p-metric"><span class="pm-label">Companies</span><span class="pm-value">187,593</span></div>
+            <div class="p-metric"><span class="pm-label">Emails</span><span class="pm-value">90,519</span></div>
+        </div>
+    </a>
 
 </div>
 
