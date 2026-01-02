@@ -19,7 +19,7 @@ include '../../Components/header.php';
 
 <main class="lab-container">
     <div class="extractor-grid">
-        
+
         <!-- Input Section -->
         <div class="data-panel full-width">
             <div class="panel-header">
@@ -28,10 +28,12 @@ include '../../Components/header.php';
             </div>
             <div class="panel-content">
                 <div class="input-group">
-                    <input type="url" id="sitemap-url" placeholder="https://example.com/sitemap.xml" required>
+                    <input type="url" id="sitemap-url" value="https://www.centraldecomunicacion.es/sitemap_index.xml"
+                        placeholder="https://example.com/sitemap.xml" required>
                     <button id="extract-btn">EXTRACT_DATA</button>
                 </div>
-                <div class="metric-desc">Introduce la URL del sitemap o sitemap_index para comenzar la extracción recursiva.</div>
+                <div class="metric-desc">Introduce la URL del sitemap o sitemap_index para comenzar la extracción
+                    recursiva.</div>
             </div>
         </div>
 

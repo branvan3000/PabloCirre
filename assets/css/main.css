@@ -283,6 +283,23 @@ h4 {
 }
 
 /* Button Primary - Fixed Contrast */
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.link-secondary {
+    display: inline-block;
+    /* margin-left: 20px; Removed/Reset as gap handles it */
+    margin-left: 0;
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--indicator-color);
+    padding-bottom: 2px;
+    transition: color 0.3s;
+}
+
 .btn-primary,
 .btn-primary:visited {
     display: inline-block;
@@ -302,15 +319,7 @@ h4 {
     color: var(--accent-color) !important;
 }
 
-.link-secondary {
-    display: inline-block;
-    margin-left: 20px;
-    color: var(--text-color);
-    text-decoration: none;
-    border-bottom: 1px solid var(--indicator-color);
-    padding-bottom: 2px;
-    transition: color 0.3s;
-}
+/* .link-secondary moved up to hero-actions block */
 
 .link-secondary:hover {
     color: var(--indicator-color);

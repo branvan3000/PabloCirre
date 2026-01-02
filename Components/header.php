@@ -180,7 +180,7 @@ require_once __DIR__ . '/config.php';
                                     <span class="mm-value">1.4M+</span>
                                 </div>
                                 <div class="mm-item">
-                                    <span class="mm-label">Focus</span>
+                                    <span class="mm-label">Mercado</span>
                                     <span class="mm-value">España</span>
                                 </div>
                             </div>
@@ -252,27 +252,27 @@ require_once __DIR__ . '/config.php';
                 </a>
                 <a href="<?php echo BASE_URL; ?>/paginas/Experiences/"
                     class="<?php echo $current_page == 'Experiences' ? 'active' : ''; ?>">
-                    <span class="nav-text">Experiences</span>
+                    <span class="nav-text">Experiencias</span>
                 </a>
                 <a href="<?php echo BASE_URL; ?>/paginas/Services/"
                     class="<?php echo $current_page == 'Services' ? 'active' : ''; ?>">
-                    <span class="nav-text">Services</span>
+                    <span class="nav-text">Servicios</span>
                 </a>
                 <a href="<?php echo BASE_URL; ?>/paginas/Projects/"
                     class="<?php echo $current_page == 'Projects' ? 'active' : ''; ?>">
-                    <span class="nav-text">Projects</span>
+                    <span class="nav-text">Proyectos</span>
                 </a>
                 <a href="<?php echo BASE_URL; ?>/paginas/Knowledge/"
                     class="<?php echo $current_page == 'Knowledge' ? 'active' : ''; ?>">
-                    <span class="nav-text">Knowledge</span>
+                    <span class="nav-text">Conocimiento</span>
                 </a>
-                <a href="<?php echo BASE_URL; ?>/paginas/VideoGames/"
+                <a href="<?php echo BASE_URL; ?>/paginas/Interactividad/"
                     class="<?php echo $current_page == 'VideoGames' ? 'active' : ''; ?>">
-                    <span class="nav-text">Video Experiences</span>
+                    <span class="nav-text">Interactividad</span>
                 </a>
                 <a href="<?php echo BASE_URL; ?>/paginas/About-Me/"
                     class="<?php echo $current_page == 'About-Me' ? 'active' : ''; ?>">
-                    <span class="nav-text">About Me</span>
+                    <span class="nav-text">Sobre Mí</span>
                 </a>
             </nav>
         </header>

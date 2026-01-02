@@ -3,9 +3,9 @@
  * Home - Pablo Cirre Portfolio
  */
 
-$page_title = "Pablo Cirre | Big Data, Formación & Videojuegos - Granada";
+$page_title = "Pablo Cirre | Big Data, Formación & Interactividad - Granada";
 $page_description = "Pablo Cirre - Experto en Big Data, Email Intelligence, Formación y Experiencias en Vídeo. Granada, España.";
-$page_keywords = "Big Data, verificador email, bases de datos empresas, formación desarrollo web, videojuegos indie, Granada, KaijuVerifier, Verne Games";
+$page_keywords = "Big Data, verificador email, bases de datos empresas, formación desarrollo web, Interactividad, Granada, KaijuVerifier, Verne Games";
 
 include 'Components/header.php';
 ?>
@@ -13,12 +13,12 @@ include 'Components/header.php';
 <!-- Hero Section -->
 <section class="grid-row hero-section">
     <div style="grid-column: 1 / -1;">
-        <h1 class="hero-title">Big Data, Email Intelligence,<br>Formación & Experiencias en Vídeo.</h1>
+        <h1 class="hero-title">Big Data, Email Intelligence,<br>Formación & Interactividad.</h1>
         <p class="hero-subtitle">
             Construyendo infraestructura digital escalable y experiencias narrativas inmersivas desde Granada,
             España.
         </p>
-        <div>
+        <div class="hero-actions">
             <a href="<?php echo BASE_URL; ?>/paginas/Projects/" class="btn-primary">Ver Proyectos</a>
             <a href="<?php echo BASE_URL; ?>/paginas/About-Me/" class="link-secondary">Leer Biografía</a>
         </div>
@@ -80,8 +80,8 @@ include 'Components/header.php';
         </div>
     </div>
 
-    <!-- Panel 4: VERIFICACIÓN con Musical Knobs (MODIFICADO - Hidden Labels) -->
-    <div class="data-panel knob-panel" style="grid-column: span 3;">
+    <!-- Panel 4: VERIFICACIÓN con Musical Knobs (Original size restored) -->
+    <div class="data-panel knob-panel">
         <div class="panel-header">
             <span class="panel-label">VERIFICACIÓN</span>
             <div class="light on"></div>
@@ -125,7 +125,7 @@ include 'Components/header.php';
 <div class="projects-grid">
 
     <div class="project-card">
-        <span class="project-tag">VIDEOJUEGOS</span>
+        <span class="project-tag">INTERACTIVIDAD</span>
         <h3 class="project-title">Verne Games</h3>
         <p class="project-desc">
             Director y Productor de "The Shape of Fantasy", un RPG narrativo con pixel art y puzzles complejos.
@@ -140,7 +140,7 @@ include 'Components/header.php';
                 <span class="pm-value">Unity</span>
             </div>
         </div>
-        <a href="<?php echo BASE_URL; ?>/paginas/VideoGames/" class="project-link">Ver más →</a>
+        <a href="<?php echo BASE_URL; ?>/paginas/Interactividad/" class="project-link">Ver más →</a>
     </div>
 
     <div class="project-card">
@@ -209,17 +209,19 @@ include 'Components/header.php';
         <p>
             Actualmente, divido mi tiempo profesional entre dos grandes pasiones que convergen en la tecnología: la
             optimización de infraestructuras de datos masivos (Big Data) para inteligencia de negocio, y la dirección
-            creativa y técnica de videojuegos narrativos en Verne Games. En Verne Games, exploramos nuevas formas de
+            creativa y técnica de experiencias interactivas en Verne Games. En Verne Games, exploramos nuevas formas de
             contar historias a través de mecánicas de juego innovadoras, como en nuestro título "The Shape of Fantasy".
         </p>
         <p>
-            Esta dualidad entre la lógica estructurada de los datos y la creatividad narrativa de los videojuegos define
+            Esta dualidad entre la lógica estructurada de los datos y la creatividad narrativa de la interactividad
+            define
             mi enfoque: técnico, riguroso, pero siempre centrado en la experiencia del usuario final.
         </p>
         <p>
             En un entorno digital saturado, la diferencia entre un producto funcional y uno memorable reside en los
             detalles. Ya sea optimizando una consulta SQL para que se ejecute en milisegundos o diseñando la curva de
-            aprendizaje de un videojuego, mi compromiso es con la excelencia técnica y estética. Creo firmemente que la
+            aprendizaje de una experiencia digital, mi compromiso es con la excelencia técnica y estética. Creo
+            firmemente que la
             tecnología debe ser invisible, sirviendo como un facilitador transparente para las necesidades humanas, y
             este principio guía cada línea de código que escribo y cada sistema que diseño.
         </p>
@@ -235,13 +237,10 @@ include 'Components/header.php';
 </div>
 
 <!-- Contact Section -->
-<div class="grid-row contact-section">
+<div class="contact-section">
     <div style="grid-column: 1 / -1;">
         <h2 style="font-size: 2rem; margin-bottom: 10px;">¿Listo para colaborar?</h2>
-        <p style="color: var(--text-secondary); margin-bottom: 30px;">Disponible para consultoría en arquitectura Big
-            Data y
-            Diseño
-            de Videojuegos. Cuéntame tu proyecto.</p>
+        Disponible para consultoría en arquitectura Big Data y Diseño de Interactividad. Cuéntame tu proyecto.</p>
     </div>
 
     <form class="contact-form" action="<?php echo BASE_URL; ?>/paginas/Contact/" method="get">
