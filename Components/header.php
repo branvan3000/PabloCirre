@@ -100,8 +100,23 @@ require_once __DIR__ . '/config.php';
         <!-- Theme Initialization -->
         <script>
             const BASE_URL = '<?php echo BASE_URL; ?>';
-            const currentTheme = localStorage.getItem('theme') || 'dark';
-            document.documentElement.setAttribute('data-theme', currentTheme);
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const getSystemTheme = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+            const applyTheme = (theme) => {
+                document.documentElement.setAttribute('data-theme', theme);
+            };
+
+            // Initialize theme
+            const initialTheme = getStoredTheme() || getSystemTheme();
+            applyTheme(initialTheme);
+
+            // Listen for system changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                if (!getStoredTheme()) {
+                    applyTheme(e.matches ? 'dark' : 'light');
+                }
+            });
         </script>
 
         <!-- Performance Optimization: Async Fonts -->
@@ -118,9 +133,7 @@ require_once __DIR__ . '/config.php';
         </noscript>
 
         <!-- Inline Critical CSS -->
-        <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/main.css">
-        <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/mobile-nav.css">
-        <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/cookie-banner.css">
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/main.css?v=110">
     <?php endif; ?>
 </head>
 
@@ -250,9 +263,9 @@ require_once __DIR__ . '/config.php';
                     class="<?php echo $current_page == 'Tools' ? 'active' : ''; ?>">
                     <span class="nav-text">Kaiju Tools</span>
                 </a>
-                <a href="<?php echo BASE_URL; ?>/paginas/Experiences/"
+                <a href="<?php echo BASE_URL; ?>/paginas/Docencia/"
                     class="<?php echo $current_page == 'Experiences' ? 'active' : ''; ?>">
-                    <span class="nav-text">Experiencias</span>
+                    <span class="nav-text">Docencia</span>
                 </a>
                 <a href="<?php echo BASE_URL; ?>/paginas/Services/"
                     class="<?php echo $current_page == 'Services' ? 'active' : ''; ?>">

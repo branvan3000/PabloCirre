@@ -1,215 +1,127 @@
 ﻿<?php
 /**
- * Projects - Portfolio y Casos de Éxito
+ * Projects - Portfolio de Impacto Institucional y Cultural
  */
 
-$page_title = "Proyectos Big Data & SaaS - Pablo Cirre";
-$page_description = "Portfolio de proyectos Big Data, SaaS y Videojuegos. Casos de éxito con 1.4M empresas, KaijuVerifier y Verne Games. Granada.";
-$page_keywords = "proyectos big data, casos de éxito big data, portfolio desarrollador web, proyectos verificación email, desarrollo videojuegos indie";
+$page_title = "Projects - Pablo Cirre";
+$page_description = "Trabajo en proyectos digitales donde lo institucional y lo cultural se traducen a producto y comunicación.";
 
 include '../../Components/header.php';
+
+$projects = [
+    [
+        'id' => 'europubhealth',
+        'title' => 'Europubhealth+',
+        'desc' => 'Máster europeo en Salud Pública dentro del marco Erasmus Mundus (programa conjunto internacional). Itinerarios y especializaciones con movilidad y doble titulación en un consorcio universitario.',
+        'url_official' => 'https://www.europubhealth.org/',
+        'tag' => 'ERASMUS MUNDUS'
+    ],
+    [
+        'id' => 'cruzapuentes',
+        'title' => 'Cruza Puentes',
+        'desc' => 'Programa provincial que conecta formación y empleo en Granada con beca remunerada, duración definida, alta en Seguridad Social y certificado oficial. Enfoque práctico y territorial.',
+        'url_official' => 'https://cruzapuentes.com/',
+        'tag' => 'GRANADA / EMPLEO'
+    ],
+    [
+        'id' => 'igualdadextremadura',
+        'title' => 'Igualdad Extremadura',
+        'desc' => 'Marco público para impulsar la igualdad entre mujeres y hombres en Extremadura. Plan 2023–2026 promovido por el Instituto de la Mujer de Extremadura (IMEX), con metodología y enfoque de implementación/seguimiento.',
+        'url_official' => 'https://igualdadextremadura.es/',
+        'tag' => 'POLÍTICA PÚBLICA'
+    ],
+    [
+        'id' => 'avalonoposiciones',
+        'title' => 'Avalon Oposiciones',
+        'desc' => 'Plataforma de formación online para oposiciones docentes. Metodología orientada a teoría, práctica y legislación, con recursos y planes formativos.',
+        'url_official' => 'https://avalonoposiciones.es/',
+        'tag' => 'EDUCACIÓN'
+    ],
+    [
+        'id' => 'asesoriadigital',
+        'title' => 'Asesoría Digital',
+        'desc' => 'Portal divulgativo de gestión y burocracia: convierte trámites y normativa en guías entendibles para profesionales, emprendedores y estudiantes.',
+        'url_official' => 'https://asesoriadigital.info/',
+        'tag' => 'DIVULGACIÓN'
+    ],
+    [
+        'id' => 'dehesadebular',
+        'title' => 'Dehesa de Búlar',
+        'desc' => 'Marca de aceite de oliva virgen extra ecológico que pone el foco en tradición familiar, alta calidad y sostenibilidad del agroecosistema (biodiversidad y gestión del entorno).',
+        'url_official' => 'https://www.dehesadebular.com/',
+        'tag' => 'AOVE / ECO'
+    ],
+    [
+        'id' => 'deportenutricion',
+        'title' => 'Deporte y Nutrición',
+        'desc' => 'Contenidos prácticos sobre deporte, entrenamiento y nutrición, orientados a utilidad inmediata: rendimiento, disciplina y bienestar.',
+        'url_official' => 'https://deporte-nutricion.net/',
+        'tag' => 'BIENESTAR'
+    ],
+    [
+        'id' => 'granadasmile',
+        'title' => 'GranadaSmile',
+        'desc' => 'Guía turística digital para conocer Granada “barrio a barrio”, con rutas y contenidos de patrimonio, experiencias y planificación de visita.',
+        'url_official' => 'https://granadasmile.com/',
+        'tag' => 'CULTURA / TURISMO'
+    ],
+    [
+        'id' => 'lacomandarural',
+        'title' => 'La Comanda Rural',
+        'desc' => 'Proyecto centrado en gastronomía sostenible y producto local, con oferta de menús saludables a domicilio y tienda. También comunica iniciativas vinculadas a salud, alimentación y territorio.',
+        'url_official' => 'https://lacomandarural.com/',
+        'tag' => 'TERRITORIO'
+    ],
+    [
+        'id' => 'plantabaja',
+        'title' => 'Planta Baja',
+        'desc' => 'Sala de conciertos en Granada con trayectoria histórica (desde 1989) y agenda activa. Un punto cultural ligado a la escena musical de la ciudad.',
+        'url_official' => 'https://plantabaja.club/',
+        'tag' => 'MÚSICA / ESCENA'
+    ],
+    [
+        'id' => 'mapamediacion',
+        'title' => 'Mapa Mediación Andalucía',
+        'desc' => 'Mapa público de recursos de mediación en Andalucía impulsado por el Defensor del Pueblo Andaluz. Recurso vivo, basado en investigación y coordinación con entidades públicas, para difundir y localizar servicios de mediación.',
+        'url_official' => 'https://mediacion.defensordelpuebloandaluz.es/mapa-recursos-andalucia/',
+        'tag' => 'DPA / PÚBLICO'
+    ]
+];
 ?>
 
-<!-- Hero Section Projects -->
-<section class="grid-row hero-section" style="padding: 80px 0;">
-    <div style="grid-column: 1 / -1;">
-        <h1 class="hero-title" style="font-size: 4rem;">Portfolio &<br>Casos de Éxito.</h1>
-        <p class="hero-subtitle">
-            Proyectos de Big Data, SaaS y Videojuegos que han impactado a más de 12,000 clientes y procesado 1.4M de
-            registros empresariales.
-        </p>
-    </div>
-</section>
+<div class="swiss-container tech-grid-bg">
+    <div class="container">
+        <header class="swiss-header swiss-header-projects">
+            <div class="swiss-label">[ ARCHIVE_2024 ]</div>
+            <h1 class="swiss-title">Projects</h1>
+            <p class="swiss-subtitle-projects">
+                Estrategia y diseño para proyectos de impacto institucional y cultural. Programas europeos, portales
+                públicos e iniciativas territoriales traducidas a producto digital.
+            </p>
+        </header>
 
-<!-- Projects Grid -->
-<div class="grid-row">
-    <div style="grid-column: 1 / -1;">
-        <h2 class="section-title">Proyectos Destacados</h2>
-    </div>
-</div>
-
-<div class="projects-grid">
-
-    <!-- Project 1: Central Data -->
-    <div class="project-card">
-        <span class="project-tag">BIG DATA</span>
-        <h3 class="project-title">Centraldecomunicacion.es</h3>
-        <p class="project-desc">
-            La base de datos B2B líder para el sector turístico en España. Conectando agencias con hoteles a través de
-            arquitectura de datos masiva.
-        </p>
-        <div class="project-metrics">
-            <div class="p-metric">
-                <span class="pm-label">Registros</span>
-                <span class="pm-value">1.4M</span>
-            </div>
-            <div class="p-metric">
-                <span class="pm-label">Sector</span>
-                <span class="pm-value">Turismo</span>
-            </div>
-            <div class="p-metric">
-                <span class="pm-label">Países</span>
-                <span class="pm-value">15+</span>
-            </div>
-        </div>
-        <a href="<?php echo BASE_URL; ?>/paginas/Projects/CentralDeComunicacion/" class="project-link">Ver más →</a>
-    </div>
-
-    <!-- Project 2: KaijuVerifier -->
-    <div class="project-card">
-        <span class="project-tag">SAAS / API</span>
-        <h3 class="project-title">KaijuVerifier</h3>
-        <p class="project-desc">
-            API de verificación de email de alto rendimiento diseñada para profesionales del marketing. Garantiza
-            higiene de listas y entregabilidad.
-        </p>
-        <div class="project-metrics">
-            <div class="p-metric">
-                <span class="pm-label">Velocidad</span>
-                <span class="pm-value">50ms</span>
-            </div>
-            <div class="p-metric">
-                <span class="pm-label">Precisión</span>
-                <span class="pm-value">99.8%</span>
-            </div>
-            <div class="p-metric">
-                <span class="pm-label">Rating</span>
-                <span class="pm-value">4.9</span>
-            </div>
-        </div>
-        <a href="<?php echo BASE_URL; ?>/paginas/Tools/KaijuEmailVerifier/" class="project-link">Ver más →</a>
-    </div>
-
-    <!-- Project 3: Verne Games -->
-    <div class="project-card">
-        <span class="project-tag">VIDEOJUEGOS</span>
-        <h3 class="project-title">Verne Games</h3>
-        <p class="project-desc">
-            Director y Productor de "The Shape of Fantasy", un RPG narrativo con pixel art y puzzles complejos
-            desarrollado en Unity.
-        </p>
-        <div class="project-metrics">
-            <div class="p-metric">
-                <span class="pm-label">Plataforma</span>
-                <span class="pm-value">Steam</span>
-            </div>
-            <div class="p-metric">
-                <span class="pm-label">Motor</span>
-                <span class="pm-value">Unity</span>
-            </div>
-            <div class="p-metric">
-                <span class="pm-label">Género</span>
-                <span class="pm-value">RPG</span>
-            </div>
-        </div>
-        <a href="<?php echo BASE_URL; ?>/paginas/VideoGames/" class="project-link">Ver más →</a>
-    </div>
-
-    <!-- Project 4: CompaniesData.cloud -->
-    <div class="project-card">
-        <span class="project-tag">BIG DATA</span>
-        <h3 class="project-title">CompaniesData.cloud</h3>
-        <p class="project-desc">
-            Servicio de datos empresariales en la nube con API REST. Consultas en tiempo real sobre empresas de
-            múltiples países europeos.
-        </p>
-        <div class="project-metrics">
-            <div class="p-metric">
-                <span class="pm-label">API Calls</span>
-                <span class="pm-value">10K/día</span>
-            </div>
-            <div class="p-metric">
-                <span class="pm-label">Uptime</span>
-                <span class="pm-value">99.9%</span>
-            </div>
-            <div class="p-metric">
-                <span class="pm-label">Clientes</span>
-                <span class="pm-value">50+</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Project 5: Formación Cámara Comercio -->
-    <div class="project-card">
-        <span class="project-tag">FORMACIÓN</span>
-        <h3 class="project-title">Formación Cámara de Comercio</h3>
-        <p class="project-desc">
-            Profesor de desarrollo web en la Cámara de Comercio de Granada. Más de 500 alumnos formados en tecnologías
-            web modernas.
-        </p>
-        <div class="project-metrics">
-            <div class="p-metric">
-                <span class="pm-label">Alumnos</span>
-                <span class="pm-value">500+</span>
-            </div>
-            <div class="p-metric">
-                <span class="pm-label">Cursos</span>
-                <span class="pm-value">20+</span>
-            </div>
-            <div class="p-metric">
-                <span class="pm-label">Rating</span>
-                <span class="pm-value">4.8</span>
-            </div>
-        </div>
-        <a href="<?php echo BASE_URL; ?>/paginas/Experiences/" class="project-link">Ver más →</a>
-    </div>
-
-    <!-- Project 6: Servidor3000 -->
-    <div class="project-card">
-        <span class="project-tag">HISTÓRICO</span>
-        <h3 class="project-title">Servidor3000</h3>
-        <p class="project-desc">
-            Uno de los primeros proyectos (2000). Servidor de hosting y soluciones web que atendió a cientos de pequeñas
-            empresas en Granada.
-        </p>
-        <div class="project-metrics">
-            <div class="p-metric">
-                <span class="pm-label">Año</span>
-                <span class="pm-value">2000</span>
-            </div>
-            <div class="p-metric">
-                <span class="pm-label">Clientes</span>
-                <span class="pm-value">300+</span>
-            </div>
-            <div class="p-metric">
-                <span class="pm-label">Años</span>
-                <span class="pm-value">10+</span>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<!-- Testimonials Section -->
-<h2 class="section-title" style="margin-top: 120px;">Lo Que Dicen los Clientes</h2>
-
-<div class="grid-row" style="margin-bottom: 120px;">
-    <div class="data-panel" style="grid-column: span 6; min-height: auto;">
-        <div class="panel-header">
-            <span class="panel-label">CLIENTE_A</span>
-            <div class="light on"></div>
-        </div>
-        <p style="font-size: 0.95rem; color: var(--text-color); opacity: 0.85; line-height: 1.6; flex: 1;">
-            "La base de datos de Centraldecomunicacion.es transformó nuestra operación. Acceso instantáneo a 1.4M
-            empresas con datos actualizados."
-        </p>
-        <div class="panel-footer">
-            <span>SECTOR: TURISMO</span>
-            <span>★★★★★</span>
-        </div>
-    </div>
-
-    <div class="data-panel" style="grid-column: span 6; min-height: auto;">
-        <div class="panel-header">
-            <span class="panel-label">CLIENTE_B</span>
-            <div class="light on"></div>
-        </div>
-        <p style="font-size: 0.95rem; color: var(--text-color); opacity: 0.85; line-height: 1.6; flex: 1;">
-            "KaijuVerifier redujo nuestro bounce rate del 15% al 2%. La API es rapidísima y la precisión es increíble."
-        </p>
-        <div class="panel-footer">
-            <span>SECTOR: MARKETING</span>
-            <span>★★★★★</span>
+        <div class="swiss-grid">
+            <?php foreach ($projects as $p):
+                $img_name = strtolower(str_replace(' ', '', $p['id'])) . "_hero_screenshot.png";
+                $img_path = BASE_URL . "/assets/img/projects/" . $img_name;
+                ?>
+                <div class="swiss-card">
+                    <div class="card-thumb">
+                        <img src="<?php echo $img_path; ?>" alt="<?php echo $p['title']; ?>"
+                            onerror="this.src='https://via.placeholder.com/400x250?text=<?php echo urlencode($p['title']); ?>'">
+                    </div>
+                    <div class="swiss-card-body">
+                        <div class="card-label"><?php echo $p['tag']; ?></div>
+                        <h3><?php echo $p['title']; ?></h3>
+                        <p><?php echo $p['desc']; ?></p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="<?php echo $p['id']; ?>/" class="btn-swiss-small">Ver Proyecto</a>
+                        <a href="<?php echo $p['url_official']; ?>" target="_blank"
+                            class="btn-swiss-small secondary">Visitar Web</a>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>

@@ -1,0 +1,93 @@
+/* assets/css/modules/global-utilities.css */
+
+/* --- TYPOGRAPHY UTILITIES --- */
+.text-hero-large {
+    font-size: clamp(3rem, 10vw, 4.5rem);
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.text-hero-medium {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.text-mono {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.text-accent {
+    color: var(--accent-color);
+}
+
+/* --- SPACING UTILITIES --- */
+.py-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.py-section-large {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.mb-section {
+    margin-bottom: 120px;
+}
+
+.mb-section-small {
+    margin-bottom: 80px;
+}
+
+.mb-medium {
+    margin-bottom: 50px;
+}
+
+.mb-small {
+    margin-bottom: 20px;
+}
+
+.mt-medium {
+    margin-top: 50px;
+}
+
+/* --- GRID & LAYOUT UTILITIES --- */
+.grid-full {
+    grid-column: 1 / -1;
+}
+
+.grid-3-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-gap-20 {
+    display: grid;
+    gap: 20px;
+}
+
+/* --- SPECIFIC REUSABLE COMPONENTS --- */
+.project-tag-accent {
+    background: var(--accent-color);
+    color: #fff;
+    padding: 4px 12px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: 0.75rem;
+}

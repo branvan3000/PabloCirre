@@ -1,0 +1,238 @@
+/* assets/css/modules/projects-labs.css */
+
+/* --- SHARED SWISS / TECHNICAL PANEL STYLES --- */
+
+.tech-grid-bg {
+    background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Projects Index specific */
+.swiss-container {
+    grid-column: 1 / -1;
+    margin-bottom: 80px;
+}
+
+.swiss-header-projects {
+    border: none;
+    padding-bottom: 20px;
+}
+
+.swiss-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.swiss-subtitle-projects {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.swiss-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    color: var(--text-color);
+}
+
+.swiss-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.swiss-card {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 450px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
+}
+
+.swiss-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.swiss-card .card-thumb {
+    width: 100%;
+    height: 220px;
+    background: #000;
+    overflow: hidden;
+}
+
+.swiss-card .card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.swiss-card:hover .card-thumb img {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.swiss-card-body {
+    padding: 25px;
+}
+
+.swiss-card h3 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.2;
+    color: var(--text-color);
+}
+
+.swiss-card p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Labs Index specific */
+.labs-hero {
+    grid-column: 1 / -1;
+    padding: 60px 0;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--text-color);
+}
+
+.labs-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    letter-spacing: -2px;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.labs-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    line-height: 1.6;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.labs-grid {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.lab-card {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 260px;
+    position: relative;
+    box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.05), inset -2px -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.lab-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 10px 10px 0 var(--accent-color);
+    border-color: var(--text-color);
+}
+
+/* Microsite / Individual Project Layouts */
+.microsite-container,
+.project-main-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 40px;
+}
+
+.project-hero {
+    padding: 100px 0 60px;
+    position: relative;
+}
+
+.project-tag-pill {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+}
+
+.metric-grid-large {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin: 60px 0;
+    padding: 40px;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+}
+
+.metric-item-large {
+    text-align: center;
+}
+
+.metric-value-large {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.metric-label-large {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 60px;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 900px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

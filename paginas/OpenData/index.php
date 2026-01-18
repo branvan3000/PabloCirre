@@ -11,13 +11,12 @@ include '../../Components/header.php';
 ?>
 
 <!-- Hero Section OpenData -->
-<section class="grid-row hero-section" style="padding: 80px 0;">
-    <div style="grid-column: 1 / -1;">
-        <h1 class="hero-title" style="font-size: 4rem;">1.4M Empresas.<br>OpenData Empresarial.</h1>
+<section class="grid-row hero-section py-section">
+    <div class="grid-full">
+        <h1 class="hero-title text-hero-large">1.4M Empresas.<br>OpenData Empresarial.</h1>
         <p class="hero-subtitle">
             La mayor base de datos empresarial B2B de España. Arquitectura Big Data diseñada para el sector turismo y
-            más
-            allá.
+            más allá.
         </p>
         <div>
             <a href="#" class="btn-primary">Acceder a la API</a>
@@ -133,60 +132,6 @@ include '../../Components/header.php';
                 </p>
             </div>
 
-            <style>
-                .field-grid {
-                    grid-column: 1 / -1;
-                    display: grid;
-                    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                    gap: 15px;
-                }
-
-                .field-item {
-                    background: var(--bg-color);
-                    border: 1px solid var(--border-color);
-                    border-radius: 4px;
-                    padding: 15px;
-                    font-size: 0.9rem;
-                    display: flex;
-                    flex-direction: column;
-                    transition: transform 0.2s, box-shadow 0.2s;
-                }
-
-                .field-item:hover {
-                    transform: translateY(-2px);
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-                    border-color: var(--accent-color);
-                }
-
-                .field-name {
-                    font-family: 'IBM Plex Mono', monospace;
-                    font-weight: 600;
-                    color: var(--accent-color);
-                    margin-bottom: 6px;
-                    font-size: 0.95rem;
-                }
-
-                .field-desc {
-                    color: var(--text-secondary);
-                    font-size: 0.85rem;
-                    line-height: 1.4;
-                }
-
-                .restricted {
-                    border-color: var(--indicator-color);
-                    background: rgba(0, 255, 200, 0.05);
-                }
-
-                .restricted .field-name {
-                    color: var(--indicator-color);
-                }
-
-                .grid-full-width {
-                    grid-column: 1 / -1;
-                    background: var(--bg-color);
-                    border: 1px dashed var(--border-color);
-                }
-            </style>
 
             <div class="field-grid">
                 <!-- Core Identity -->

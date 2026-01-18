@@ -13,21 +13,25 @@ include '../../Components/header.php';
 
 <style>
     :root {
-        --glass-bg: rgba(255, 255, 255, 0.03);
-        --glass-border: rgba(255, 255, 255, 0.1);
-        --accent-glow: rgba(0, 243, 255, 0.15);
+        --bg-color: #e0e0e0;
+        --panel-bg: #d4d4d4;
+        --text-color: #333;
+        --accent-color: #ff4400;
+        --indicator-color: #00ccaa;
+        --border-color: #999;
     }
 
-    [data-theme="light"] {
-        --glass-bg: rgba(0, 0, 0, 0.03);
-        --glass-border: rgba(0, 0, 0, 0.1);
-        --accent-glow: rgba(0, 102, 255, 0.05);
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
     }
 
     .analytics-container {
         grid-column: 1 / -1;
-        padding-top: 40px;
-        padding-bottom: 80px;
+        padding: 40px;
+        max-width: 1400px;
+        margin: 0 auto;
+        font-family: 'IBM Plex Mono', monospace;
     }
 
     .dashboard-header {
@@ -35,105 +39,115 @@ include '../../Components/header.php';
         justify-content: space-between;
         align-items: flex-end;
         margin-bottom: 40px;
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 2px solid var(--text-color);
         padding-bottom: 20px;
     }
 
     .dashboard-id {
-        font-family: 'IBM Plex Mono', monospace;
         font-size: 0.8rem;
         color: var(--accent-color);
         text-transform: uppercase;
         letter-spacing: 2px;
+        font-weight: 700;
     }
 
     .dashboard-title {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'IBM Plex Mono', monospace;
         font-size: 2.5rem;
         margin-top: 5px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -1px;
     }
 
-    .stats-grid {
+    .console-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+        gap: 15px;
         margin-bottom: 30px;
+        background: #bbb;
+        padding: 15px;
+        border: 2px solid #999;
+        box-shadow:
+            inset 0 0 20px rgba(0, 0, 0, 0.1),
+            0 20px 50px rgba(0, 0, 0, 0.2);
     }
 
-    .stat-card {
-        background: var(--glass-bg);
-        border: 1px solid var(--glass-border);
-        padding: 24px;
+    .panel {
+        background: var(--panel-bg);
+        border: 1px solid #aaa;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         position: relative;
-        overflow: hidden;
+        box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.5), inset -2px -2px 5px rgba(0, 0, 0, 0.05);
+        min-height: 200px;
     }
 
-    .stat-card::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 2px;
-        height: 100%;
-        background: var(--accent-color);
-    }
-
-    .stat-label {
-        font-family: 'IBM Plex Mono', monospace;
+    .panel-header {
         font-size: 0.7rem;
-        font-weight: 600;
-        color: var(--text-secondary);
         text-transform: uppercase;
         letter-spacing: 1px;
+        border-bottom: 1px solid #999;
+        padding-bottom: 5px;
         margin-bottom: 15px;
-        display: block;
+        display: flex;
+        justify-content: space-between;
+        color: #555;
+        font-weight: 600;
     }
 
-    .stat-value {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 2rem;
+    .panel-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .metric-large {
+        font-size: 3rem;
         font-weight: 700;
-        color: var(--text-color);
+        color: #222;
+        font-family: 'IBM Plex Mono', monospace;
+        line-height: 1;
     }
 
-    .stat-trend {
-        font-family: 'IBM Plex Mono', monospace;
-        font-size: 0.75rem;
+    .metric-label {
+        font-size: 0.7rem;
         margin-top: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #666;
+    }
+
+    .metric-change {
+        font-size: 0.8rem;
+        margin-top: 5px;
+        font-weight: 700;
         display: flex;
         align-items: center;
         gap: 5px;
     }
 
     .trend-up {
-        color: #00ff88;
+        color: #008866;
     }
 
     .trend-down {
-        color: #ff4400;
+        color: var(--accent-color);
     }
 
     .charts-grid {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        gap: 30px;
+        gap: 15px;
     }
 
-    .chart-container {
-        background: var(--glass-bg);
-        border: 1px solid var(--glass-border);
-        padding: 24px;
-        min-height: 400px;
-    }
-
-    .chart-title {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 1.1rem;
-        font-weight: 600;
-        margin-bottom: 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .large-panel {
+        /* Generic large panel style if needed */
     }
 
     .live-indicator {
@@ -143,46 +157,21 @@ include '../../Components/header.php';
         font-family: 'IBM Plex Mono', monospace;
         font-size: 0.7rem;
         color: var(--accent-color);
+        font-weight: 700;
+        text-transform: uppercase;
     }
 
-    .pulse {
-        width: 6px;
-        height: 6px;
-        background: var(--accent-color);
+    .light {
+        width: 12px;
+        height: 12px;
+        background: var(--indicator-color);
         border-radius: 50%;
-        animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-        0% {
-            box-shadow: 0 0 0 0 rgba(0, 243, 255, 0.7);
-        }
-
-        70% {
-            box-shadow: 0 0 0 10px rgba(0, 243, 255, 0);
-        }
-
-        100% {
-            box-shadow: 0 0 0 0 rgba(0, 243, 255, 0);
-        }
-    }
-
-    .info-panel {
-        margin-top: 40px;
-        background: rgba(var(--accent-color-rgb), 0.05);
-        border: 1px dashed var(--accent-color);
-        padding: 20px;
-        font-size: 0.9rem;
-        color: var(--text-secondary);
-        line-height: 1.6;
-    }
-
-    .info-panel strong {
-        color: var(--accent-color);
+        box-shadow: 0 0 10px var(--indicator-color);
+        border: 1px solid #333;
     }
 
     @media (max-width: 1024px) {
-        .stats-grid {
+        .console-grid {
             grid-template-columns: repeat(2, 1fr);
         }
 
@@ -192,7 +181,7 @@ include '../../Components/header.php';
     }
 
     @media (max-width: 600px) {
-        .stats-grid {
+        .console-grid {
             grid-template-columns: 1fr;
         }
     }
@@ -201,42 +190,69 @@ include '../../Components/header.php';
 <div class="analytics-container">
     <header class="dashboard-header">
         <div>
-            <div class="dashboard-id">Experimental Access // 004</div>
-            <h1 class="dashboard-title">TITAN Central Analytics</h1>
+            <div class="dashboard-id">Ref. CH-60S</div>
+            <h1 class="dashboard-title">TITAN / Data Control</h1>
         </div>
         <div class="live-indicator">
-            <div class="pulse"></div>
-            MONITORIZACIÓN EN VIVO // G-94NBJV4V0Z
+            <div class="light"></div>
+            SYSTEM ONLINE // G-94NBJV4V0Z
         </div>
     </header>
 
-    <div class="stats-grid">
-        <div class="stat-card">
-            <span class="stat-label">Usuarios (Hoy)</span>
-            <div class="stat-value" id="stats-users">0</div>
-            <div class="stat-trend trend-up">
-                <span>↑ 12%</span> vs ayer
+    <div class="console-grid">
+        <div class="panel">
+            <div class="panel-header">
+                <span>ACTIVE_USERS</span>
+                <span>01</span>
+            </div>
+            <div class="panel-content">
+                <div class="metric-large" id="stats-users">0</div>
+                <div class="metric-change trend-up">
+                    <span>+12%</span>
+                </div>
+                <div class="metric-label">Daily Average</div>
             </div>
         </div>
-        <div class="stat-card">
-            <span class="stat-label">Sesiones</span>
-            <div class="stat-value" id="stats-sessions">0</div>
-            <div class="stat-trend trend-up">
-                <span>↑ 8%</span> vs ayer
+
+        <div class="panel">
+            <div class="panel-header">
+                <span>TOTAL_SESSIONS</span>
+                <span>02</span>
+            </div>
+            <div class="panel-content">
+                <div class="metric-large" id="stats-sessions">0</div>
+                <div class="metric-change trend-up">
+                    <span>+8%</span>
+                </div>
+                <div class="metric-label">Qualified Traffic</div>
             </div>
         </div>
-        <div class="stat-card">
-            <span class="stat-label">Tasa de Rebote</span>
-            <div class="stat-value" id="stats-bounce">0%</div>
-            <div class="stat-trend trend-down">
-                <span>↓ 2%</span> optimización
+
+        <div class="panel">
+            <div class="panel-header">
+                <span>BOUNCE_RATE</span>
+                <span>03</span>
+            </div>
+            <div class="panel-content">
+                <div class="metric-large" id="stats-bounce">0%</div>
+                <div class="metric-change trend-down">
+                    <span>-2%</span>
+                </div>
+                <div class="metric-label">Optimization</div>
             </div>
         </div>
-        <div class="stat-card">
-            <span class="stat-label">Páginas / Sesión</span>
-            <div class="stat-value" id="stats-pages">0.0</div>
-            <div class="stat-trend trend-up">
-                <span>↑ 0.4</span> engagement
+
+        <div class="panel">
+            <div class="panel-header">
+                <span>PAGES_PER_SESSION</span>
+                <span>04</span>
+            </div>
+            <div class="panel-content">
+                <div class="metric-large" id="stats-pages">0.0</div>
+                <div class="metric-change trend-up">
+                    <span>+0.4</span>
+                </div>
+                <div class="metric-label">High Engagement</div>
             </div>
         </div>
     </div>
